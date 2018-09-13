@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     
-    <title>Python模块导入 - 作业部落 Cmd Markdown 编辑阅读器</title>
+    <title>Windows64位环境安装 - 作业部落 Cmd Markdown 编辑阅读器</title>
 
 
     <link href="https://www.zybuluo.com/static/img/favicon.png" type="image/x-icon" rel="icon">
@@ -69,112 +69,63 @@
         <span>
             <code>@Channelchan</code>
         </span>
-        <code><span class="article-updated-date">2018-03-21T02:07:58.000000Z</span></code>
-        <code><span>字数 </span><span class="article-characters">2465</span></code>
-        <code><span>阅读 </span><span class="article-read">118333</span></code>
+        <code><span class="article-updated-date">2018-04-10T01:56:16.000000Z</span></code>
+        <code><span>字数 </span><span class="article-characters">1712</span></code>
+        <code><span>阅读 </span><span class="article-read">37963</span></code>
     </div>
-    <div id="wmd-preview" class="wmd-preview wmd-preview-full-reader"><div class="md-section-divider"></div><div class="md-section-divider"></div><h2 data-anchor-id="aymh" id="python模块导入">Python模块导入</h2><div class="md-section-divider"></div><h3 data-anchor-id="fgo3" id="import">import</h3><p data-anchor-id="uxtu">想使用Python源文件，只需在另一个源文件里执行import语句，语法如下：</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="1cao" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">import</span><span class="pln"> numpy</span></code></li><li class="L1"><code class="language-python"><span class="pln">n</span><span class="pun">=</span><span class="pln">numpy</span><span class="pun">.</span><span class="pln">array</span><span class="pun">([[</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2</span><span class="pun">],[</span><span class="lit">3</span><span class="pun">,</span><span class="pln"> </span><span class="lit">4</span><span class="pun">]])</span></code></li><li class="L2"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">n</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="s7br"><code>[[1 2]
- [3 4]]
-</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="6yd4" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">import</span><span class="pln"> matplotlib</span><span class="pun">.</span><span class="pln">pyplot </span><span class="kwd">as</span><span class="pln"> plt</span></code></li><li class="L1"><code class="language-python"><span class="pln">plt</span><span class="pun">.</span><span class="pln">plot</span><span class="pun">(</span><span class="pln">n</span><span class="pun">)</span></code></li><li class="L2"><code class="language-python"><span class="pln">plt</span><span class="pun">.</span><span class="pln">show</span><span class="pun">()</span></code></li></ol></pre><p data-anchor-id="9c3t"><img src="http://static.zybuluo.com/Channelchan/nghu43i1yxapltvb6wz0p9vp/output_2_0.png" alt="output_2_0.png-10.8kB" title=""></p><div class="md-section-divider"></div><h3 data-anchor-id="5bo2" id="fromimport">from...import*</h3><p data-anchor-id="9x23">这提供了一个简单的方法来导入一个模块中的所有项目。然而这种声明不该被过多地使用。  <br>
-把一个模块的所有内容全都导入到当前的命名空间也是可行的，只需使用如下声明：</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="k0je" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">from</span><span class="pln"> datetime </span><span class="kwd">import</span><span class="pln"> </span><span class="pun">*</span></code></li></ol></pre><div class="md-section-divider"></div><h3 data-anchor-id="jwbd" id="fromimport语句">from...import语句：</h3><p data-anchor-id="tl4w">Python的from语句让你从模块中导入一个指定的部分到当前命名空间中。 </p><p data-anchor-id="ajxr">dir()函数一个排好序的字符串列表，返回的列表容纳了在一个模块里定义的所有模块，变量和函数。</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="wl9a" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">from</span><span class="pln"> datetime </span><span class="kwd">import</span><span class="pln"> time</span></code></li><li class="L1"><code class="language-python"></code></li><li class="L2"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">dir</span><span class="pun">(</span><span class="pln">time</span><span class="pun">))</span></code></li></ol></pre><pre data-anchor-id="vj9m"><code>['__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'dst', 'fold', 'hour', 'isoformat', 'max', 'microsecond', 'min', 'minute', 'replace', 'resolution', 'second', 'strftime', 'tzinfo', 'tzname', 'utcoffset']
-</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="u1jx" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">help</span><span class="pun">(</span><span class="pln">time</span><span class="pun">))</span></code></li></ol></pre><pre data-anchor-id="cshz"><code>Help on class time in module datetime:
-
-class time(builtins.object)
- |  time([hour[, minute[, second[, microsecond[, tzinfo]]]]]) --&gt; a time object
- |  
- |  All arguments are optional. tzinfo may be None, or an instance of
- |  a tzinfo subclass. The remaining arguments may be ints.
- |  
- |  Methods defined here:
- |  
- |  __eq__(self, value, /)
- |      Return self==value.
- |  
- |  __format__(...)
- |      Formats self with strftime.
- |  
- |  __ge__(self, value, /)
- |      Return self&gt;=value.
- |  
- |  __getattribute__(self, name, /)
- |      Return getattr(self, name).
- |  
- |  __gt__(self, value, /)
- |      Return self&gt;value.
- |  
- |  __hash__(self, /)
- |      Return hash(self).
- |  
- |  __le__(self, value, /)
- |      Return self&lt;=value.
- |  
- |  __lt__(self, value, /)
- |      Return self&lt;value.
- |  
- |  __ne__(self, value, /)
- |      Return self!=value.
- |  
- |  __new__(*args, **kwargs) from builtins.type
- |      Create and return a new object.  See help(type) for accurate signature.
- |  
- |  __reduce__(...)
- |      __reduce__() -&gt; (cls, state)
- |  
- |  __reduce_ex__(...)
- |      __reduce_ex__(proto) -&gt; (cls, state)
- |  
- |  __repr__(self, /)
- |      Return repr(self).
- |  
- |  __str__(self, /)
- |      Return str(self).
- |  
- |  dst(...)
- |      Return self.tzinfo.dst(self).
- |  
- |  isoformat(...)
- |      Return string in ISO 8601 format, [HH[:MM[:SS[.mmm[uuu]]]]][+HH:MM].
- |      
- |      timespec specifies what components of the time to include.
- |  
- |  replace(...)
- |      Return time with new specified fields.
- |  
- |  strftime(...)
- |      format -&gt; strftime() style string.
- |  
- |  tzname(...)
- |      Return self.tzinfo.tzname(self).
- |  
- |  utcoffset(...)
- |      Return self.tzinfo.utcoffset(self).
- |  
- |  ----------------------------------------------------------------------
- |  Data descriptors defined here:
- |  
- |  fold
- |  
- |  hour
- |  
- |  microsecond
- |  
- |  minute
- |  
- |  second
- |  
- |  tzinfo
- |  
- |  ----------------------------------------------------------------------
- |  Data and other attributes defined here:
- |  
- |  max = datetime.time(23, 59, 59, 999999)
- |  
- |  min = datetime.time(0, 0)
- |  
- |  resolution = datetime.timedelta(0, 0, 1)
-
-None
-</code></pre></div>
+    <div id="wmd-preview" class="wmd-preview wmd-preview-full-reader"><div class="md-section-divider"></div><div class="md-section-divider"></div><h1 data-anchor-id="0l93" id="windows64位环境安装">Windows64位环境安装</h1><p data-anchor-id="oah9"><code>环境安装</code></p><hr><div class="md-section-divider"></div><h2 data-anchor-id="sq0l" id="安装anaconda3">安装Anaconda3</h2><p data-anchor-id="c4jr">如果已经成功安装了Anaconda3可以跳过此步骤。</p><p data-anchor-id="4zsi">点击下面的链接下载windows64位版的Anaconda3 <br>
+<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.0.0-Windows-x86_64.exe" target="_blank">https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.0.0-Windows-x86_64.exe</a></p><p data-anchor-id="o65s">下载完成后直接双击应用程序安装。</p><p data-anchor-id="dxol"><strong>注意</strong>：当安装运行到该步骤时两个选项都要勾选，否咋不会添加环境变量，将导致在命令行中无法使用conda</p><p data-anchor-id="bb9p"><img src="http://static.zybuluo.com/Channelchan/qygsled5oumfwunku05r33j3/image.png" alt="image.png-29.4kB" title=""></p><p data-anchor-id="lbge">安装完后打开命令行并输入：</p><blockquote data-anchor-id="d48p" class="white-blockquote">
+  <p>conda -V</p>
+</blockquote><p data-anchor-id="c0l4">如下图所示说明Anaconda安装完成。</p><p data-anchor-id="sn47"><img src="http://static.zybuluo.com/Channelchan/5yy9b5umdpw6839lavlsr4g9/image.png" alt="image.png-1.4kB" title=""></p><p data-anchor-id="iqy7">如果以前有安装Anaconda但担心版本太老，可以用一下命令更新conda到最新版本：</p><blockquote data-anchor-id="22oj" class="white-blockquote">
+  <p>conda update conda </p>
+</blockquote><p data-anchor-id="k1km">命令执行时会要求确认，此时输入y并回车确认。</p><div class="md-section-divider"></div><h2 data-anchor-id="374i" id="使用pip安装python第三方包">使用pip安装python第三方包</h2><p data-anchor-id="pe6n">可以用以下命令在python环境中安装第三方包(<strong>packagename</strong>代表<strong>包名</strong>或者<strong>本地文件路径</strong>)：</p><blockquote data-anchor-id="285y" class="white-blockquote">
+  <p>pip install packagename </p>
+</blockquote><p data-anchor-id="h8so">大部分包可以通过输入包名从网络直接下载并安装，但某些包在安装时需要 <strong>c++ compiler</strong> ，如果没有安装 <strong>c++ compiler</strong> ， 可以从下面的网站直接下载编译好的版本并安装：</p><p data-anchor-id="drzs"><a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/" target="_blank">https://www.lfd.uci.edu/~gohlke/pythonlibs/</a></p><p data-anchor-id="7s04">以下包需要从上面的网站下载并安装：</p><blockquote data-anchor-id="e2wv" class="white-blockquote">
+  <p>ta-lib <br>
+  python_snappy <br>
+  line_profiler <br>
+  bcolz</p>
+</blockquote><p data-anchor-id="mzf3">下载时选择<strong>(cp36, win64)</strong>的版本，如下图所示 <br>
+<img src="http://static.zybuluo.com/Channelchan/yj9098vr2k4181i7yd60d1tb/image.png" alt="image.png-31.2kB" title=""></p><p data-anchor-id="wrvz">下载完成后按照使用 <strong>pip install</strong> 命令安装 <br>
+例：</p><blockquote data-anchor-id="uk9m" class="white-blockquote">
+  <p>pip install D:\environments\win64\bcolz-1.1.2-cp36-cp36m-win_amd64.whl</p>
+</blockquote><p data-anchor-id="kjqf">用下面的命令可以查看是否安装了对应的包：</p><blockquote data-anchor-id="gm8k" class="white-blockquote">
+  <p>pip show packagename</p>
+</blockquote><p data-anchor-id="fc0u"><img src="http://static.zybuluo.com/Channelchan/ds7viahte783unh1cy3iwl2u/image.png" alt="image.png-8.5kB" title=""></p><div class="md-section-divider"></div><h2 data-anchor-id="bfq9" id="安装rqalpha">安装rqalpha</h2><blockquote data-anchor-id="wy0t" class="white-blockquote">
+  <p>pip install rqalpha</p>
+</blockquote><p data-anchor-id="96zz">如果安装失败，则检查上一步中的列出的包是否有安装。</p><p data-anchor-id="t60h">用下面命令下载回测数据：</p><blockquote data-anchor-id="2d7u" class="white-blockquote">
+  <p>rqalpha update_bundle</p>
+</blockquote><p data-anchor-id="lq8b"><img src="http://static.zybuluo.com/Channelchan/fbn0awl3kijsxsuws297gppq/image.png" alt="image.png-8kB" title=""></p><div class="md-section-divider"></div><h2 data-anchor-id="bvd4" id="安装git">安装git</h2><p data-anchor-id="kzgo">安装了git后可以通过pip直接从github仓库中下载项目源码并安装到python环境中。 <br>
+点击下面链接下载安装程序： <br>
+<a href="https://github.com/git-for-windows/git/releases/download/v2.16.2.windows.1/Git-2.16.2-64-bit.exe" target="_blank">https://github.com/git-for-windows/git/releases/download/v2.16.2.windows.1/Git-2.16.2-64-bit.exe</a> <br>
+下载完成后直接双击打开安装即可。</p><p data-anchor-id="cz3w">安装完成后可以在开始栏中找到<strong>git bash</strong></p><div class="md-section-divider"></div><h2 data-anchor-id="dwya" id="安装jaqs">安装jaqs</h2><blockquote data-anchor-id="gwas" class="white-blockquote">
+  <p>pip install jaqs <br>
+  pip install jaqs-fxdayu</p>
+</blockquote><p data-anchor-id="91b4">下载需要稍微等待一段时间，如果安装失败，则检查是否安装安装了 <strong>python_snappy</strong> (python第三方包)。</p><div class="md-section-divider"></div><h3 data-anchor-id="4z2v" id="jaqs-fxdayu">jaqs-fxdayu</h3><p data-anchor-id="xij3">大鱼金融在jaqs官方版本的基础上,重点改进和优化了股票多因子研究部分的功能,帮助使用者更方便的去设计/评估和分析因子表现,优化因子效果，进行因子组合研。了解更多：<a href="https://github.com/xingetouzi/jaqs-fxdayu" target="_blank">https://github.com/xingetouzi/jaqs-fxdayu</a> 。</p><div class="md-section-divider"></div><h2 data-anchor-id="k5ak" id="安装ta-lib">安装TA-Lib</h2><p data-anchor-id="i8ie">到上面提供的网站中下载编译好的版本： <br>
+<a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/" target="_blank">https://www.lfd.uci.edu/~gohlke/pythonlibs/</a></p><div class="md-section-divider"></div><h1 data-anchor-id="wiry" id="下载链接">下载链接</h1><table data-anchor-id="h5q7" class="table table-striped-white table-bordered">
+<thead>
+<tr>
+ <th style="text-align:center;">名称</th>
+ <th style="text-align:center;">链接</th>
+</tr>
+</thead>
+<tbody><tr>
+ <td style="text-align:center;">Anaconda3</td>
+ <td style="text-align:center;"><a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.0.0-Windows-x86_64.exe" target="_blank">https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.0.0-Windows-x86_64.exe</a></td>
+</tr>
+<tr>
+ <td style="text-align:center;">py_install</td>
+ <td style="text-align:center;"><a href="https://pan.baidu.com/s/1XZaLhKnhvXppxoShHL2z8w" target="_blank">https://pan.baidu.com/s/1XZaLhKnhvXppxoShHL2z8w</a></td>
+</tr>
+<tr>
+ <td style="text-align:center;">git</td>
+ <td style="text-align:center;"><a href="https://github.com/git-for-windows/git/releases/download/v2.16.2.windows.1/Git-2.16.2-64-bit.exe" target="_blank">https://github.com/git-for-windows/git/releases/download/v2.16.2.windows.1/Git-2.16.2-64-bit.exe</a></td>
+</tr>
+<tr>
+ <td style="text-align:center;">Windows binaries for python extension packages</td>
+ <td style="text-align:center;"><a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/" target="_blank">https://www.lfd.uci.edu/~gohlke/pythonlibs/</a></td>
+</tr>
+</tbody></table></div>
     <div class="remark-icons">
     </div>
 </div>
@@ -1118,7 +1069,7 @@ None
     <li class="file-item item" file-created-date="2018-03-08T09:04:14.000000Z">
         <a tabindex="-1" href="https://www.zybuluo.com/Channelchan/note/1066051" title="【已发布】 2018-04-10T01:56:16.000000Z">
         <i class="icon-share-sign"></i>
-        <span id="1066051">Windows64位环境安装</span>
+        <span id="1066051" class="whiter-on-black">Windows64位环境安装</span>
         </a>
     </li>
 
@@ -2150,7 +2101,7 @@ None
     <li class="file-item item" file-created-date="2017-03-03T01:28:57.000000Z">
         <a tabindex="-1" href="https://www.zybuluo.com/Channelchan/note/644665" title="【已发布】 2018-03-21T02:07:58.000000Z">
         <i class="icon-share-sign"></i>
-        <span id="644665" class="whiter-on-black">Python模块导入</span>
+        <span id="644665">Python模块导入</span>
         </a>
     </li>
 
@@ -2405,15 +2356,15 @@ None
             // '' means not logged in, otherwise the logged in username, for mdeditor.mako, this value will be reset in render.js otherwise, for user_note.mako, it's rendered by server side.
             loggedInUsername: '',
             isPageOwner: 'False' === 'True' ? true : false,
-            loginComeFromUrl: 'https://www.zybuluo.com/login?return_to=https%3A%2F%2Fwww.zybuluo.com%2FChannelchan%2Fnote%2F644665',
-            noteRemarksUrl: "https://www.zybuluo.com/note/644665/remarks", 
-            newNoteRemarkUrl: "https://www.zybuluo.com/note/644665/remark/new", 
-            updateNoteRemarkUrl: "https://www.zybuluo.com/note/644665/remark/update", 
-            deleteNoteRemarkUrl: "https://www.zybuluo.com/note/644665/remark/delete", 
-            publishNoteRemarkUrl: "https://www.zybuluo.com/note/644665/remark/publish", 
-            newNoteRemarkReplyUrl: "https://www.zybuluo.com/note/644665/remark_reply/new", 
-            updateNoteRemarkReplyUrl: "https://www.zybuluo.com/note/644665/remark_reply/update", 
-            deleteNoteRemarkReplyUrl: "https://www.zybuluo.com/note/644665/remark_reply/delete", 
+            loginComeFromUrl: 'https://www.zybuluo.com/login?return_to=https%3A%2F%2Fwww.zybuluo.com%2FChannelchan%2Fnote%2F1066051',
+            noteRemarksUrl: "https://www.zybuluo.com/note/1066051/remarks", 
+            newNoteRemarkUrl: "https://www.zybuluo.com/note/1066051/remark/new", 
+            updateNoteRemarkUrl: "https://www.zybuluo.com/note/1066051/remark/update", 
+            deleteNoteRemarkUrl: "https://www.zybuluo.com/note/1066051/remark/delete", 
+            publishNoteRemarkUrl: "https://www.zybuluo.com/note/1066051/remark/publish", 
+            newNoteRemarkReplyUrl: "https://www.zybuluo.com/note/1066051/remark_reply/new", 
+            updateNoteRemarkReplyUrl: "https://www.zybuluo.com/note/1066051/remark_reply/update", 
+            deleteNoteRemarkReplyUrl: "https://www.zybuluo.com/note/1066051/remark_reply/delete", 
         };
 
         // BEGIN: pace.js configuration

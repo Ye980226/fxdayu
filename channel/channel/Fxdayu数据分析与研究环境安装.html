@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     
-    <title>Python模块导入 - 作业部落 Cmd Markdown 编辑阅读器</title>
+    <title>Fxdayu数据分析与研究环境安装 - 作业部落 Cmd Markdown 编辑阅读器</title>
 
 
     <link href="https://www.zybuluo.com/static/img/favicon.png" type="image/x-icon" rel="icon">
@@ -69,112 +69,35 @@
         <span>
             <code>@Channelchan</code>
         </span>
-        <code><span class="article-updated-date">2018-03-21T02:07:58.000000Z</span></code>
-        <code><span>字数 </span><span class="article-characters">2465</span></code>
-        <code><span>阅读 </span><span class="article-read">118333</span></code>
+        <code><span class="article-updated-date">2018-07-23T02:21:53.000000Z</span></code>
+        <code><span>字数 </span><span class="article-characters">507</span></code>
+        <code><span>阅读 </span><span class="article-read">37894</span></code>
     </div>
-    <div id="wmd-preview" class="wmd-preview wmd-preview-full-reader"><div class="md-section-divider"></div><div class="md-section-divider"></div><h2 data-anchor-id="aymh" id="python模块导入">Python模块导入</h2><div class="md-section-divider"></div><h3 data-anchor-id="fgo3" id="import">import</h3><p data-anchor-id="uxtu">想使用Python源文件，只需在另一个源文件里执行import语句，语法如下：</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="1cao" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">import</span><span class="pln"> numpy</span></code></li><li class="L1"><code class="language-python"><span class="pln">n</span><span class="pun">=</span><span class="pln">numpy</span><span class="pun">.</span><span class="pln">array</span><span class="pun">([[</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2</span><span class="pun">],[</span><span class="lit">3</span><span class="pun">,</span><span class="pln"> </span><span class="lit">4</span><span class="pun">]])</span></code></li><li class="L2"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">n</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="s7br"><code>[[1 2]
- [3 4]]
-</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="6yd4" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">import</span><span class="pln"> matplotlib</span><span class="pun">.</span><span class="pln">pyplot </span><span class="kwd">as</span><span class="pln"> plt</span></code></li><li class="L1"><code class="language-python"><span class="pln">plt</span><span class="pun">.</span><span class="pln">plot</span><span class="pun">(</span><span class="pln">n</span><span class="pun">)</span></code></li><li class="L2"><code class="language-python"><span class="pln">plt</span><span class="pun">.</span><span class="pln">show</span><span class="pun">()</span></code></li></ol></pre><p data-anchor-id="9c3t"><img src="http://static.zybuluo.com/Channelchan/nghu43i1yxapltvb6wz0p9vp/output_2_0.png" alt="output_2_0.png-10.8kB" title=""></p><div class="md-section-divider"></div><h3 data-anchor-id="5bo2" id="fromimport">from...import*</h3><p data-anchor-id="9x23">这提供了一个简单的方法来导入一个模块中的所有项目。然而这种声明不该被过多地使用。  <br>
-把一个模块的所有内容全都导入到当前的命名空间也是可行的，只需使用如下声明：</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="k0je" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">from</span><span class="pln"> datetime </span><span class="kwd">import</span><span class="pln"> </span><span class="pun">*</span></code></li></ol></pre><div class="md-section-divider"></div><h3 data-anchor-id="jwbd" id="fromimport语句">from...import语句：</h3><p data-anchor-id="tl4w">Python的from语句让你从模块中导入一个指定的部分到当前命名空间中。 </p><p data-anchor-id="ajxr">dir()函数一个排好序的字符串列表，返回的列表容纳了在一个模块里定义的所有模块，变量和函数。</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="wl9a" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">from</span><span class="pln"> datetime </span><span class="kwd">import</span><span class="pln"> time</span></code></li><li class="L1"><code class="language-python"></code></li><li class="L2"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">dir</span><span class="pun">(</span><span class="pln">time</span><span class="pun">))</span></code></li></ol></pre><pre data-anchor-id="vj9m"><code>['__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'dst', 'fold', 'hour', 'isoformat', 'max', 'microsecond', 'min', 'minute', 'replace', 'resolution', 'second', 'strftime', 'tzinfo', 'tzname', 'utcoffset']
-</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="u1jx" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">help</span><span class="pun">(</span><span class="pln">time</span><span class="pun">))</span></code></li></ol></pre><pre data-anchor-id="cshz"><code>Help on class time in module datetime:
+    <div id="wmd-preview" class="wmd-preview wmd-preview-full-reader"><div class="md-section-divider"></div><div class="md-section-divider"></div><h1 data-anchor-id="gz8j" id="fxdayu数据分析与研究环境安装">Fxdayu数据分析与研究环境安装</h1><p data-anchor-id="lamo"><code>环境安装</code></p><hr><div class="md-section-divider"></div><h2 data-anchor-id="66s1" id="目标">目标</h2><p></p><ol data-anchor-id="gdga"> <br>
+<li>安装<strong>Anaconda3</strong>(python环境) <br>
+详见下面的<em>安装教程</em></li>
+<li>安装<strong>rqalpha</strong>并下载回测用数据 <br><p></p>
 
-class time(builtins.object)
- |  time([hour[, minute[, second[, microsecond[, tzinfo]]]]]) --&gt; a time object
- |  
- |  All arguments are optional. tzinfo may be None, or an instance of
- |  a tzinfo subclass. The remaining arguments may be ints.
- |  
- |  Methods defined here:
- |  
- |  __eq__(self, value, /)
- |      Return self==value.
- |  
- |  __format__(...)
- |      Formats self with strftime.
- |  
- |  __ge__(self, value, /)
- |      Return self&gt;=value.
- |  
- |  __getattribute__(self, name, /)
- |      Return getattr(self, name).
- |  
- |  __gt__(self, value, /)
- |      Return self&gt;value.
- |  
- |  __hash__(self, /)
- |      Return hash(self).
- |  
- |  __le__(self, value, /)
- |      Return self&lt;=value.
- |  
- |  __lt__(self, value, /)
- |      Return self&lt;value.
- |  
- |  __ne__(self, value, /)
- |      Return self!=value.
- |  
- |  __new__(*args, **kwargs) from builtins.type
- |      Create and return a new object.  See help(type) for accurate signature.
- |  
- |  __reduce__(...)
- |      __reduce__() -&gt; (cls, state)
- |  
- |  __reduce_ex__(...)
- |      __reduce_ex__(proto) -&gt; (cls, state)
- |  
- |  __repr__(self, /)
- |      Return repr(self).
- |  
- |  __str__(self, /)
- |      Return str(self).
- |  
- |  dst(...)
- |      Return self.tzinfo.dst(self).
- |  
- |  isoformat(...)
- |      Return string in ISO 8601 format, [HH[:MM[:SS[.mmm[uuu]]]]][+HH:MM].
- |      
- |      timespec specifies what components of the time to include.
- |  
- |  replace(...)
- |      Return time with new specified fields.
- |  
- |  strftime(...)
- |      format -&gt; strftime() style string.
- |  
- |  tzname(...)
- |      Return self.tzinfo.tzname(self).
- |  
- |  utcoffset(...)
- |      Return self.tzinfo.utcoffset(self).
- |  
- |  ----------------------------------------------------------------------
- |  Data descriptors defined here:
- |  
- |  fold
- |  
- |  hour
- |  
- |  microsecond
- |  
- |  minute
- |  
- |  second
- |  
- |  tzinfo
- |  
- |  ----------------------------------------------------------------------
- |  Data and other attributes defined here:
- |  
- |  max = datetime.time(23, 59, 59, 999999)
- |  
- |  min = datetime.time(0, 0)
- |  
- |  resolution = datetime.timedelta(0, 0, 1)
-
-None
-</code></pre></div>
+<blockquote class="white-blockquote">
+  pip install rqalpha == 3.0.9</blockquote></li>
+  <li>安装<strong>jaqs</strong>  <br>
+  pip install jaqs-fxdayu</li>
+  <li>安装<strong>TA-Lib</strong></li>
+  <li>安装<strong>alphalens</strong> <br>
+  pip install alphalens==0.1.2</li>
+  <li>用 <strong>jupyter notebook</strong> 运行代码案例</li>
+  </ol><div class="md-section-divider"></div><h2 data-anchor-id="7dgh" id="安装教程">安装教程：</h2><p data-anchor-id="ub5j"><strong><a href="https://www.zybuluo.com/Channelchan/note/1066051" target="_blank">windows64位</a></strong> <br>
+<strong><a href="https://www.zybuluo.com/Channelchan/note/1066199" target="_blank">macos</a></strong></p><div class="md-section-divider"></div><h2 data-anchor-id="wrhn" id="测试">测试</h2><p data-anchor-id="3ri8">打开 <strong>命令行(cmd)/终端(terminal)</strong> </p><p data-anchor-id="od85">用<strong>pip</strong>安装<strong>jupyter</strong>：</p><blockquote data-anchor-id="l75a" class="white-blockquote">
+  <p>pip install jupyter</p>
+</blockquote><p data-anchor-id="khmj"><a href="http://p065psqpy.bkt.clouddn.com/Test_Env.ipynb" target="_blank">一键下载测试的ipynb</a></p><p data-anchor-id="yiry">用 <strong>cd</strong> 命令进入代码案例所在的目录：</p><blockquote data-anchor-id="gi3s" class="white-blockquote">
+  <p>cd C:...</p>
+</blockquote><p data-anchor-id="jhyz">对于windows，需要先切换盘符，如过案例代码在<strong>D盘</strong>，用 <strong>D:</strong> 切换盘符:</p><blockquote data-anchor-id="8hdb" class="white-blockquote">
+  <p>D:</p>
+</blockquote><p data-anchor-id="5uo7">在该目录下启动<strong>jupyter</strong>:</p><blockquote data-anchor-id="zdzo" class="white-blockquote">
+  <p>jupyter notebook</p>
+</blockquote><p data-anchor-id="3w5j">此时<strong>jupyter</strong>会用默认浏览器打开操作界面： <br>
+<img src="http://static.zybuluo.com/Channelchan/rigb70ixwtco6tqw5689dohi/image.png" alt="image.png-10.5kB" title=""></p><p data-anchor-id="tg2o">点击对应的文件即可进入案例代码，选择代买块按 <strong>ctrl+enter</strong> 即可运行对应的代码块 <br>
+<img src="http://static.zybuluo.com/Channelchan/hq3e0v5dkjvb5rrgw0ifg0om/image.png" alt="image.png-47.4kB" title=""></p><p data-anchor-id="90kn">测试代码都跑通，就能基本确定安装成功。</p><p data-anchor-id="gxrm">最后再ternimal终端输入 anaconda-navigator ，打开后点击Orange3的install。</p></div>
     <div class="remark-icons">
     </div>
 </div>
@@ -1102,7 +1025,7 @@ None
     <li class="file-item item" file-created-date="2018-03-08T10:07:25.000000Z">
         <a tabindex="-1" href="https://www.zybuluo.com/Channelchan/note/1065836" title="【已发布】 2018-07-23T02:21:53.000000Z">
         <i class="icon-share-sign"></i>
-        <span id="1065836">Fxdayu数据分析与研究环境安装</span>
+        <span id="1065836" class="whiter-on-black">Fxdayu数据分析与研究环境安装</span>
         </a>
     </li>
 
@@ -2150,7 +2073,7 @@ None
     <li class="file-item item" file-created-date="2017-03-03T01:28:57.000000Z">
         <a tabindex="-1" href="https://www.zybuluo.com/Channelchan/note/644665" title="【已发布】 2018-03-21T02:07:58.000000Z">
         <i class="icon-share-sign"></i>
-        <span id="644665" class="whiter-on-black">Python模块导入</span>
+        <span id="644665">Python模块导入</span>
         </a>
     </li>
 
@@ -2405,15 +2328,15 @@ None
             // '' means not logged in, otherwise the logged in username, for mdeditor.mako, this value will be reset in render.js otherwise, for user_note.mako, it's rendered by server side.
             loggedInUsername: '',
             isPageOwner: 'False' === 'True' ? true : false,
-            loginComeFromUrl: 'https://www.zybuluo.com/login?return_to=https%3A%2F%2Fwww.zybuluo.com%2FChannelchan%2Fnote%2F644665',
-            noteRemarksUrl: "https://www.zybuluo.com/note/644665/remarks", 
-            newNoteRemarkUrl: "https://www.zybuluo.com/note/644665/remark/new", 
-            updateNoteRemarkUrl: "https://www.zybuluo.com/note/644665/remark/update", 
-            deleteNoteRemarkUrl: "https://www.zybuluo.com/note/644665/remark/delete", 
-            publishNoteRemarkUrl: "https://www.zybuluo.com/note/644665/remark/publish", 
-            newNoteRemarkReplyUrl: "https://www.zybuluo.com/note/644665/remark_reply/new", 
-            updateNoteRemarkReplyUrl: "https://www.zybuluo.com/note/644665/remark_reply/update", 
-            deleteNoteRemarkReplyUrl: "https://www.zybuluo.com/note/644665/remark_reply/delete", 
+            loginComeFromUrl: 'https://www.zybuluo.com/login?return_to=https%3A%2F%2Fwww.zybuluo.com%2FChannelchan%2Fnote%2F1065836',
+            noteRemarksUrl: "https://www.zybuluo.com/note/1065836/remarks", 
+            newNoteRemarkUrl: "https://www.zybuluo.com/note/1065836/remark/new", 
+            updateNoteRemarkUrl: "https://www.zybuluo.com/note/1065836/remark/update", 
+            deleteNoteRemarkUrl: "https://www.zybuluo.com/note/1065836/remark/delete", 
+            publishNoteRemarkUrl: "https://www.zybuluo.com/note/1065836/remark/publish", 
+            newNoteRemarkReplyUrl: "https://www.zybuluo.com/note/1065836/remark_reply/new", 
+            updateNoteRemarkReplyUrl: "https://www.zybuluo.com/note/1065836/remark_reply/update", 
+            deleteNoteRemarkReplyUrl: "https://www.zybuluo.com/note/1065836/remark_reply/delete", 
         };
 
         // BEGIN: pace.js configuration

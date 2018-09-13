@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     
-    <title>Python模块导入 - 作业部落 Cmd Markdown 编辑阅读器</title>
+    <title>Python数据运算 - 作业部落 Cmd Markdown 编辑阅读器</title>
 
 
     <link href="https://www.zybuluo.com/static/img/favicon.png" type="image/x-icon" rel="icon">
@@ -69,111 +69,223 @@
         <span>
             <code>@Channelchan</code>
         </span>
-        <code><span class="article-updated-date">2018-03-21T02:07:58.000000Z</span></code>
-        <code><span>字数 </span><span class="article-characters">2465</span></code>
-        <code><span>阅读 </span><span class="article-read">118333</span></code>
+        <code><span class="article-updated-date">2017-11-27T05:55:16.000000Z</span></code>
+        <code><span>字数 </span><span class="article-characters">1665</span></code>
+        <code><span>阅读 </span><span class="article-read">118559</span></code>
     </div>
-    <div id="wmd-preview" class="wmd-preview wmd-preview-full-reader"><div class="md-section-divider"></div><div class="md-section-divider"></div><h2 data-anchor-id="aymh" id="python模块导入">Python模块导入</h2><div class="md-section-divider"></div><h3 data-anchor-id="fgo3" id="import">import</h3><p data-anchor-id="uxtu">想使用Python源文件，只需在另一个源文件里执行import语句，语法如下：</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="1cao" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">import</span><span class="pln"> numpy</span></code></li><li class="L1"><code class="language-python"><span class="pln">n</span><span class="pun">=</span><span class="pln">numpy</span><span class="pun">.</span><span class="pln">array</span><span class="pun">([[</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2</span><span class="pun">],[</span><span class="lit">3</span><span class="pun">,</span><span class="pln"> </span><span class="lit">4</span><span class="pun">]])</span></code></li><li class="L2"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">n</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="s7br"><code>[[1 2]
- [3 4]]
-</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="6yd4" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">import</span><span class="pln"> matplotlib</span><span class="pun">.</span><span class="pln">pyplot </span><span class="kwd">as</span><span class="pln"> plt</span></code></li><li class="L1"><code class="language-python"><span class="pln">plt</span><span class="pun">.</span><span class="pln">plot</span><span class="pun">(</span><span class="pln">n</span><span class="pun">)</span></code></li><li class="L2"><code class="language-python"><span class="pln">plt</span><span class="pun">.</span><span class="pln">show</span><span class="pun">()</span></code></li></ol></pre><p data-anchor-id="9c3t"><img src="http://static.zybuluo.com/Channelchan/nghu43i1yxapltvb6wz0p9vp/output_2_0.png" alt="output_2_0.png-10.8kB" title=""></p><div class="md-section-divider"></div><h3 data-anchor-id="5bo2" id="fromimport">from...import*</h3><p data-anchor-id="9x23">这提供了一个简单的方法来导入一个模块中的所有项目。然而这种声明不该被过多地使用。  <br>
-把一个模块的所有内容全都导入到当前的命名空间也是可行的，只需使用如下声明：</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="k0je" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">from</span><span class="pln"> datetime </span><span class="kwd">import</span><span class="pln"> </span><span class="pun">*</span></code></li></ol></pre><div class="md-section-divider"></div><h3 data-anchor-id="jwbd" id="fromimport语句">from...import语句：</h3><p data-anchor-id="tl4w">Python的from语句让你从模块中导入一个指定的部分到当前命名空间中。 </p><p data-anchor-id="ajxr">dir()函数一个排好序的字符串列表，返回的列表容纳了在一个模块里定义的所有模块，变量和函数。</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="wl9a" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">from</span><span class="pln"> datetime </span><span class="kwd">import</span><span class="pln"> time</span></code></li><li class="L1"><code class="language-python"></code></li><li class="L2"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">dir</span><span class="pun">(</span><span class="pln">time</span><span class="pun">))</span></code></li></ol></pre><pre data-anchor-id="vj9m"><code>['__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'dst', 'fold', 'hour', 'isoformat', 'max', 'microsecond', 'min', 'minute', 'replace', 'resolution', 'second', 'strftime', 'tzinfo', 'tzname', 'utcoffset']
-</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="u1jx" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">help</span><span class="pun">(</span><span class="pln">time</span><span class="pun">))</span></code></li></ol></pre><pre data-anchor-id="cshz"><code>Help on class time in module datetime:
+    <div id="wmd-preview" class="wmd-preview wmd-preview-full-reader"><div class="md-section-divider"></div><div class="md-section-divider"></div><h2 id="python数据运算" data-anchor-id="6joa">Python数据运算</h2><div class="md-section-divider"></div><h3 id="变量名" data-anchor-id="ti6c">变量名</h3><p data-anchor-id="m7mf">变量名为字符开头，其他可以是下划线数字字母。注意不要用到Python内建函数命名。</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="0ifj"><ol class="linenums"><li class="L0"><code class="language-python"><span class="lit">1I</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> a</span></code></li></ol></pre><pre data-anchor-id="k8oa"><code>  File "&lt;ipython-input-5-ad871c211e7c&gt;", line 1
+    1I = a
+     ^
+SyntaxError: invalid syntax
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="sh7q"><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">list </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="lit">1</span><span class="pun">,</span><span class="lit">2</span><span class="pun">,</span><span class="lit">3</span><span class="pun">,</span><span class="lit">4</span><span class="pun">,</span><span class="lit">5</span><span class="pun">]</span></code></li></ol></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="xtvx"><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">t </span><span class="pun">=</span><span class="pln"> tuple</span><span class="pun">(</span><span class="pln">list</span><span class="pun">)</span></code></li></ol></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="uddj"><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">t</span></code></li></ol></pre><pre data-anchor-id="ooaa"><code>(1, 2, 3, 4, 5)
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="mfi0"><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">list</span><span class="pun">(</span><span class="pln">t</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="079v"><code>---------------------------------------------------------------------------
 
-class time(builtins.object)
- |  time([hour[, minute[, second[, microsecond[, tzinfo]]]]]) --&gt; a time object
- |  
- |  All arguments are optional. tzinfo may be None, or an instance of
- |  a tzinfo subclass. The remaining arguments may be ints.
- |  
- |  Methods defined here:
- |  
- |  __eq__(self, value, /)
- |      Return self==value.
- |  
- |  __format__(...)
- |      Formats self with strftime.
- |  
- |  __ge__(self, value, /)
- |      Return self&gt;=value.
- |  
- |  __getattribute__(self, name, /)
- |      Return getattr(self, name).
- |  
- |  __gt__(self, value, /)
- |      Return self&gt;value.
- |  
- |  __hash__(self, /)
- |      Return hash(self).
- |  
- |  __le__(self, value, /)
- |      Return self&lt;=value.
- |  
- |  __lt__(self, value, /)
- |      Return self&lt;value.
- |  
- |  __ne__(self, value, /)
- |      Return self!=value.
- |  
- |  __new__(*args, **kwargs) from builtins.type
- |      Create and return a new object.  See help(type) for accurate signature.
- |  
- |  __reduce__(...)
- |      __reduce__() -&gt; (cls, state)
- |  
- |  __reduce_ex__(...)
- |      __reduce_ex__(proto) -&gt; (cls, state)
- |  
- |  __repr__(self, /)
- |      Return repr(self).
- |  
- |  __str__(self, /)
- |      Return str(self).
- |  
- |  dst(...)
- |      Return self.tzinfo.dst(self).
- |  
- |  isoformat(...)
- |      Return string in ISO 8601 format, [HH[:MM[:SS[.mmm[uuu]]]]][+HH:MM].
- |      
- |      timespec specifies what components of the time to include.
- |  
- |  replace(...)
- |      Return time with new specified fields.
- |  
- |  strftime(...)
- |      format -&gt; strftime() style string.
- |  
- |  tzname(...)
- |      Return self.tzinfo.tzname(self).
- |  
- |  utcoffset(...)
- |      Return self.tzinfo.utcoffset(self).
- |  
- |  ----------------------------------------------------------------------
- |  Data descriptors defined here:
- |  
- |  fold
- |  
- |  hour
- |  
- |  microsecond
- |  
- |  minute
- |  
- |  second
- |  
- |  tzinfo
- |  
- |  ----------------------------------------------------------------------
- |  Data and other attributes defined here:
- |  
- |  max = datetime.time(23, 59, 59, 999999)
- |  
- |  min = datetime.time(0, 0)
- |  
- |  resolution = datetime.timedelta(0, 0, 1)
+TypeError                                 Traceback (most recent call last)
 
-None
+&lt;ipython-input-4-f57fd3c9bd0b&gt; in &lt;module&gt;()
+----&gt; 1 list(t)
+
+
+TypeError: 'list' object is not callable
+</code></pre><div class="md-section-divider"></div><h3 id="算术运算" data-anchor-id="gaxc">算术运算</h3><p data-anchor-id="m91h">常用算术运算符：加法+、减法-、乘法、除法/、取模%、幂指数*、取整//。 </p><table class="table table-striped-white table-bordered" data-anchor-id="j4py">
+<thead>
+<tr>
+ <th style="text-align:center;">运算符</th>
+ <th style="text-align:center;">描述</th>
+ <th style="text-align:center;">返回</th>
+ <th style="text-align:center;">实例</th>
+</tr>
+</thead>
+<tbody><tr>
+ <td style="text-align:center;">+</td>
+ <td style="text-align:center;">加</td>
+ <td style="text-align:center;">相加结果</td>
+ <td style="text-align:center;">a+b; &gt;&gt;&gt; 13</td>
+</tr>
+<tr>
+ <td style="text-align:center;">-</td>
+ <td style="text-align:center;">减</td>
+ <td style="text-align:center;">相减结果</td>
+ <td style="text-align:center;">a-b; &gt;&gt;&gt; 5</td>
+</tr>
+<tr>
+ <td style="text-align:center;">*</td>
+ <td style="text-align:center;">乘</td>
+ <td style="text-align:center;">相乘结果</td>
+ <td style="text-align:center;">a*b; &gt;&gt;&gt; 36</td>
+</tr>
+<tr>
+ <td style="text-align:center;">/</td>
+ <td style="text-align:center;">除</td>
+ <td style="text-align:center;">相除结果</td>
+ <td style="text-align:center;">a/b; &gt;&gt;&gt; 2.25</td>
+</tr>
+<tr>
+ <td style="text-align:center;">%</td>
+ <td style="text-align:center;">取模</td>
+ <td style="text-align:center;">除法余数</td>
+ <td style="text-align:center;">a%b; &gt;&gt;&gt; 1</td>
+</tr>
+<tr>
+ <td style="text-align:center;">**</td>
+ <td style="text-align:center;">幂</td>
+ <td style="text-align:center;">a的b次幂</td>
+ <td style="text-align:center;">a**b; &gt;&gt;&gt; 6561</td>
+</tr>
+<tr>
+ <td style="text-align:center;">//</td>
+ <td style="text-align:center;">取整除</td>
+ <td style="text-align:center;">商的整数</td>
+ <td style="text-align:center;">a//b;&gt;&gt;&gt; 2</td>
+</tr>
+</tbody></table><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="d69o"><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">a</span><span class="pun">=</span><span class="lit">9</span></code></li><li class="L1"><code class="language-python"><span class="pln">b</span><span class="pun">=</span><span class="lit">4</span></code></li><li class="L2"><code class="language-python"><span class="pln">a</span><span class="pun">**</span><span class="pln">b</span></code></li></ol></pre><pre data-anchor-id="zi52"><code>6561
+</code></pre><div class="md-section-divider"></div><h3 id="比较运算" data-anchor-id="szyl">比较运算</h3><p data-anchor-id="0ez8">常用算术运算符：加法+、减法-、乘法、除法/、取模%、幂指数*、取整//。 </p><table class="table table-striped-white table-bordered" data-anchor-id="3q5v">
+<thead>
+<tr>
+ <th style="text-align:center;">运算符</th>
+ <th style="text-align:center;">描述</th>
+ <th style="text-align:center;">返回</th>
+ <th style="text-align:center;">实例</th>
+</tr>
+</thead>
+<tbody><tr>
+ <td style="text-align:center;">==</td>
+ <td style="text-align:center;">等于</td>
+ <td style="text-align:center;">是否相等</td>
+ <td style="text-align:center;">a==b; &gt;&gt;&gt; False</td>
+</tr>
+<tr>
+ <td style="text-align:center;">!=</td>
+ <td style="text-align:center;">不等于</td>
+ <td style="text-align:center;">是否不相等</td>
+ <td style="text-align:center;">a!=b; &gt;&gt;&gt; True</td>
+</tr>
+<tr>
+ <td style="text-align:center;">&lt;&gt;</td>
+ <td style="text-align:center;">不等于</td>
+ <td style="text-align:center;">是否不相等</td>
+ <td style="text-align:center;">a&lt;&gt;b; &gt;&gt;&gt; True</td>
+</tr>
+<tr>
+ <td style="text-align:center;">&gt;</td>
+ <td style="text-align:center;">大于</td>
+ <td style="text-align:center;">是否大于</td>
+ <td style="text-align:center;">a&gt;b; &gt;&gt;&gt; True</td>
+</tr>
+<tr>
+ <td style="text-align:center;">&lt;</td>
+ <td style="text-align:center;">小于</td>
+ <td style="text-align:center;">是否小于</td>
+ <td style="text-align:center;">a&lt; b;  &gt;&gt;&gt; False</td>
+</tr>
+<tr>
+ <td style="text-align:center;">(&gt;=)</td>
+ <td style="text-align:center;">大于等于</td>
+ <td style="text-align:center;">是否大于等于</td>
+ <td style="text-align:center;">a&gt;=b; &gt;&gt;&gt; True</td>
+</tr>
+<tr>
+ <td style="text-align:center;">&lt;=</td>
+ <td style="text-align:center;">小于等于</td>
+ <td style="text-align:center;">是否小于等于</td>
+ <td style="text-align:center;">a&lt;=b; &gt;&gt;&gt; False</td>
+</tr>
+</tbody></table><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="74ri"><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">a</span><span class="pun">=</span><span class="lit">9</span></code></li><li class="L1"><code class="language-python"><span class="pln">b</span><span class="pun">=</span><span class="lit">4</span></code></li><li class="L2"><code class="language-python"><span class="pln">a</span><span class="pun">!=</span><span class="pln">b</span></code></li></ol></pre><pre data-anchor-id="bj7e"><code>True
+</code></pre><div class="md-section-divider"></div><h3 id="赋值运算" data-anchor-id="ytf5">赋值运算</h3><p data-anchor-id="1nz2">将一些数据赋值给自定义的变量，对数据运算的中间结果进行存储，以备后续使用。</p><table class="table table-striped-white table-bordered" data-anchor-id="v26u">
+<thead>
+<tr>
+ <th style="text-align:center;">运算符</th>
+ <th style="text-align:center;">描述</th>
+ <th style="text-align:center;">实例</th>
+</tr>
+</thead>
+<tbody><tr>
+ <td style="text-align:center;">=</td>
+ <td style="text-align:center;">简单赋值</td>
+ <td style="text-align:center;">c=a+b; 将a+b赋值为c</td>
+</tr>
+<tr>
+ <td style="text-align:center;">+</td>
+ <td style="text-align:center;">加法赋值</td>
+ <td style="text-align:center;">c+=a; 等效于c=c+a</td>
+</tr>
+<tr>
+ <td style="text-align:center;">--</td>
+ <td style="text-align:center;">减法赋值</td>
+ <td style="text-align:center;">c-=a; 等效于c=c-a</td>
+</tr>
+<tr>
+ <td style="text-align:center;">*</td>
+ <td style="text-align:center;">乘法赋值</td>
+ <td style="text-align:center;">c×=a; 等效于c=c×a</td>
+</tr>
+<tr>
+ <td style="text-align:center;">/</td>
+ <td style="text-align:center;">除法赋值</td>
+ <td style="text-align:center;">c/=a; 等效于c=c/a</td>
+</tr>
+<tr>
+ <td style="text-align:center;">%</td>
+ <td style="text-align:center;">取模赋值</td>
+ <td style="text-align:center;">c%=a; 等效于c=c%a</td>
+</tr>
+<tr>
+ <td style="text-align:center;">**</td>
+ <td style="text-align:center;">幂赋值</td>
+ <td style="text-align:center;">c**=a; 等效于c=c**a</td>
+</tr>
+<tr>
+ <td style="text-align:center;">//</td>
+ <td style="text-align:center;">取整除赋值</td>
+ <td style="text-align:center;">c//=a; 等效于c=c//a</td>
+</tr>
+</tbody></table><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="cvdo"><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">a</span><span class="pun">=</span><span class="lit">9</span></code></li><li class="L1"><code class="language-python"><span class="pln">b</span><span class="pun">=</span><span class="lit">4</span></code></li><li class="L2"><code class="language-python"><span class="pln">c</span><span class="pun">=</span><span class="lit">0</span></code></li><li class="L3"><code class="language-python"><span class="pln">c</span><span class="pun">=</span><span class="pln">a</span><span class="pun">+</span><span class="pln">b</span></code></li><li class="L4"><code class="language-python"><span class="pln">c</span></code></li></ol></pre><pre data-anchor-id="mow4"><code>13
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="gxv0"><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">c</span><span class="pun">+=</span><span class="pln">a</span></code></li><li class="L1"><code class="language-python"><span class="pln">c</span></code></li></ol></pre><pre data-anchor-id="jk54"><code>22
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="thag"><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">c</span><span class="pun">-=</span><span class="pln">a</span></code></li><li class="L1"><code class="language-python"><span class="pln">c</span></code></li></ol></pre><pre data-anchor-id="5jbe"><code>13
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="2na5"><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">c</span><span class="pun">%=</span><span class="pln">a</span></code></li><li class="L1"><code class="language-python"><span class="pln">c</span></code></li></ol></pre><pre data-anchor-id="eg4m"><code>4
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="2pnu"><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">c</span><span class="pun">//=</span><span class="pln">a</span></code></li><li class="L1"><code class="language-python"><span class="pln">c</span></code></li></ol></pre><pre data-anchor-id="y4a8"><code>0
+</code></pre><div class="md-section-divider"></div><h3 id="逻辑运算" data-anchor-id="3190">逻辑运算</h3><p data-anchor-id="91j2">逻辑运算所涉及的数据类型为布尔值，返回值仅仅存在有限的几种可能性。</p><table class="table table-striped-white table-bordered" data-anchor-id="bgwq">
+<thead>
+<tr>
+ <th style="text-align:center;">运算符</th>
+ <th style="text-align:center;">描述</th>
+ <th style="text-align:center;">实例</th>
+</tr>
+</thead>
+<tbody><tr>
+ <td style="text-align:center;">and</td>
+ <td style="text-align:center;">与, 如果a为False，a and b返回False，否则它返回b的值。</td>
+ <td style="text-align:center;">a and b 返回 4</td>
+</tr>
+<tr>
+ <td style="text-align:center;">or</td>
+ <td style="text-align:center;">或，如果a是非0，他返回a的值，否则它返回b的值。</td>
+ <td style="text-align:center;">a or b 返回 9</td>
+</tr>
+<tr>
+ <td style="text-align:center;">not</td>
+ <td style="text-align:center;">非，如果a为 True，返回 False 。如果a为False它返回True。</td>
+ <td style="text-align:center;">not a 返回 False</td>
+</tr>
+</tbody></table><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="tmil"><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">a</span><span class="pun">=</span><span class="lit">9</span></code></li><li class="L1"><code class="language-python"><span class="pln">b</span><span class="pun">=</span><span class="lit">4</span></code></li><li class="L2"><code class="language-python"><span class="kwd">if</span><span class="pln"> a </span><span class="kwd">or</span><span class="pln"> b</span><span class="pun">:</span></code></li><li class="L3"><code class="language-python"><span class="pln">    </span><span class="kwd">print</span><span class="pln"> </span><span class="pun">(</span><span class="str">"变量 a 和 b 都为 True，或其中一个变量为 True"</span><span class="pun">)</span></code></li><li class="L4"><code class="language-python"><span class="kwd">else</span><span class="pun">:</span></code></li><li class="L5"><code class="language-python"><span class="pln">    </span><span class="kwd">print</span><span class="pln"> </span><span class="pun">(</span><span class="str">"变量 a 和 b 都为 False"</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="3kw6"><code>变量 a 和 b 都为 True，或其中一个变量为 True
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="l08f"><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">if</span><span class="pln"> </span><span class="kwd">not</span><span class="pun">(</span><span class="pln">a </span><span class="kwd">and</span><span class="pln"> b</span><span class="pun">):</span></code></li><li class="L1"><code class="language-python"><span class="pln">    </span><span class="kwd">print</span><span class="pln"> </span><span class="pun">(</span><span class="str">"变量 a 和 b 都为 false，或其中一个变量为 false"</span><span class="pun">)</span></code></li><li class="L2"><code class="language-python"><span class="kwd">else</span><span class="pun">:</span></code></li><li class="L3"><code class="language-python"><span class="pln">    </span><span class="kwd">print</span><span class="pln"> </span><span class="pun">(</span><span class="str">"变量 a 和 b 都为 True"</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="rifv"><code>变量 a 和 b 都为 True
+</code></pre><div class="md-section-divider"></div><h3 id="成员运算" data-anchor-id="s0i4">成员运算</h3><p data-anchor-id="wo2d">为复杂的数据结构而设立的一种运算，主要面向元组、列表、字典。</p><table class="table table-striped-white table-bordered" data-anchor-id="xuyt">
+<thead>
+<tr>
+ <th style="text-align:center;">运算符</th>
+ <th style="text-align:center;">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+ <td style="text-align:center;">in</td>
+ <td style="text-align:center;">如果在指定的序列中找到值返回 True，否则返回 False。</td>
+</tr>
+<tr>
+ <td style="text-align:center;">not in</td>
+ <td style="text-align:center;">如果在指定的序列中找到值返回 True，否则返回 False。</td>
+</tr>
+</tbody></table><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="836d"><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">a</span><span class="pun">=</span><span class="lit">9</span></code></li><li class="L1"><code class="language-python"><span class="pln">b</span><span class="pun">=</span><span class="lit">4</span></code></li><li class="L2"><code class="language-python"><span class="pln">list</span><span class="pun">=[</span><span class="lit">1</span><span class="pun">,</span><span class="lit">3</span><span class="pun">,</span><span class="lit">5</span><span class="pun">,</span><span class="lit">7</span><span class="pun">,</span><span class="lit">9</span><span class="pun">]</span></code></li><li class="L3"><code class="language-python"><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln"> a </span><span class="kwd">in</span><span class="pln"> list </span><span class="pun">):</span></code></li><li class="L4"><code class="language-python"><span class="pln">    </span><span class="kwd">print</span><span class="pln"> </span><span class="pun">(</span><span class="str">"变量 a 在给定的列表中 list 中"</span><span class="pun">)</span></code></li><li class="L5"><code class="language-python"><span class="kwd">else</span><span class="pun">:</span></code></li><li class="L6"><code class="language-python"><span class="pln">    </span><span class="kwd">print</span><span class="pln"> </span><span class="pun">(</span><span class="str">"变量 a 不在给定的列表中 list 中"</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="dh2h"><code>变量 a 在给定的列表中 list 中
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="vj0e"><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">b </span><span class="kwd">not</span><span class="pln"> </span><span class="kwd">in</span><span class="pln"> list</span><span class="pun">):</span></code></li><li class="L1"><code class="language-python"><span class="pln">    </span><span class="kwd">print</span><span class="pln"> </span><span class="pun">(</span><span class="str">"变量 b 不在给定的列表中 list 中"</span><span class="pun">)</span></code></li><li class="L2"><code class="language-python"><span class="kwd">else</span><span class="pun">:</span></code></li><li class="L3"><code class="language-python"><span class="pln">    </span><span class="kwd">print</span><span class="pln"> </span><span class="pun">(</span><span class="str">"变量 b 在给定的列表中 list 中"</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="cnoq"><code>变量 b 不在给定的列表中 list 中
 </code></pre></div>
     <div class="remark-icons">
     </div>
@@ -2150,7 +2262,7 @@ None
     <li class="file-item item" file-created-date="2017-03-03T01:28:57.000000Z">
         <a tabindex="-1" href="https://www.zybuluo.com/Channelchan/note/644665" title="【已发布】 2018-03-21T02:07:58.000000Z">
         <i class="icon-share-sign"></i>
-        <span id="644665" class="whiter-on-black">Python模块导入</span>
+        <span id="644665">Python模块导入</span>
         </a>
     </li>
 
@@ -2166,7 +2278,7 @@ None
     <li class="file-item item" file-created-date="2017-03-03T01:26:50.000000Z">
         <a tabindex="-1" href="https://www.zybuluo.com/Channelchan/note/644606" title="【已发布】 2017-11-27T05:55:16.000000Z">
         <i class="icon-share-sign"></i>
-        <span id="644606">Python数据运算</span>
+        <span id="644606" class="whiter-on-black">Python数据运算</span>
         </a>
     </li>
 
@@ -2405,15 +2517,15 @@ None
             // '' means not logged in, otherwise the logged in username, for mdeditor.mako, this value will be reset in render.js otherwise, for user_note.mako, it's rendered by server side.
             loggedInUsername: '',
             isPageOwner: 'False' === 'True' ? true : false,
-            loginComeFromUrl: 'https://www.zybuluo.com/login?return_to=https%3A%2F%2Fwww.zybuluo.com%2FChannelchan%2Fnote%2F644665',
-            noteRemarksUrl: "https://www.zybuluo.com/note/644665/remarks", 
-            newNoteRemarkUrl: "https://www.zybuluo.com/note/644665/remark/new", 
-            updateNoteRemarkUrl: "https://www.zybuluo.com/note/644665/remark/update", 
-            deleteNoteRemarkUrl: "https://www.zybuluo.com/note/644665/remark/delete", 
-            publishNoteRemarkUrl: "https://www.zybuluo.com/note/644665/remark/publish", 
-            newNoteRemarkReplyUrl: "https://www.zybuluo.com/note/644665/remark_reply/new", 
-            updateNoteRemarkReplyUrl: "https://www.zybuluo.com/note/644665/remark_reply/update", 
-            deleteNoteRemarkReplyUrl: "https://www.zybuluo.com/note/644665/remark_reply/delete", 
+            loginComeFromUrl: 'https://www.zybuluo.com/login?return_to=https%3A%2F%2Fwww.zybuluo.com%2FChannelchan%2Fnote%2F644606',
+            noteRemarksUrl: "https://www.zybuluo.com/note/644606/remarks", 
+            newNoteRemarkUrl: "https://www.zybuluo.com/note/644606/remark/new", 
+            updateNoteRemarkUrl: "https://www.zybuluo.com/note/644606/remark/update", 
+            deleteNoteRemarkUrl: "https://www.zybuluo.com/note/644606/remark/delete", 
+            publishNoteRemarkUrl: "https://www.zybuluo.com/note/644606/remark/publish", 
+            newNoteRemarkReplyUrl: "https://www.zybuluo.com/note/644606/remark_reply/new", 
+            updateNoteRemarkReplyUrl: "https://www.zybuluo.com/note/644606/remark_reply/update", 
+            deleteNoteRemarkReplyUrl: "https://www.zybuluo.com/note/644606/remark_reply/delete", 
         };
 
         // BEGIN: pace.js configuration

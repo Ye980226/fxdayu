@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     
-    <title>Python模块导入 - 作业部落 Cmd Markdown 编辑阅读器</title>
+    <title>Python递归函数 - 作业部落 Cmd Markdown 编辑阅读器</title>
 
 
     <link href="https://www.zybuluo.com/static/img/favicon.png" type="image/x-icon" rel="icon">
@@ -69,111 +69,48 @@
         <span>
             <code>@Channelchan</code>
         </span>
-        <code><span class="article-updated-date">2018-03-21T02:07:58.000000Z</span></code>
-        <code><span>字数 </span><span class="article-characters">2465</span></code>
-        <code><span>阅读 </span><span class="article-read">118333</span></code>
+        <code><span class="article-updated-date">2018-03-21T02:16:53.000000Z</span></code>
+        <code><span>字数 </span><span class="article-characters">877</span></code>
+        <code><span>阅读 </span><span class="article-read">37030</span></code>
     </div>
-    <div id="wmd-preview" class="wmd-preview wmd-preview-full-reader"><div class="md-section-divider"></div><div class="md-section-divider"></div><h2 data-anchor-id="aymh" id="python模块导入">Python模块导入</h2><div class="md-section-divider"></div><h3 data-anchor-id="fgo3" id="import">import</h3><p data-anchor-id="uxtu">想使用Python源文件，只需在另一个源文件里执行import语句，语法如下：</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="1cao" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">import</span><span class="pln"> numpy</span></code></li><li class="L1"><code class="language-python"><span class="pln">n</span><span class="pun">=</span><span class="pln">numpy</span><span class="pun">.</span><span class="pln">array</span><span class="pun">([[</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2</span><span class="pun">],[</span><span class="lit">3</span><span class="pun">,</span><span class="pln"> </span><span class="lit">4</span><span class="pun">]])</span></code></li><li class="L2"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">n</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="s7br"><code>[[1 2]
- [3 4]]
-</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="6yd4" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">import</span><span class="pln"> matplotlib</span><span class="pun">.</span><span class="pln">pyplot </span><span class="kwd">as</span><span class="pln"> plt</span></code></li><li class="L1"><code class="language-python"><span class="pln">plt</span><span class="pun">.</span><span class="pln">plot</span><span class="pun">(</span><span class="pln">n</span><span class="pun">)</span></code></li><li class="L2"><code class="language-python"><span class="pln">plt</span><span class="pun">.</span><span class="pln">show</span><span class="pun">()</span></code></li></ol></pre><p data-anchor-id="9c3t"><img src="http://static.zybuluo.com/Channelchan/nghu43i1yxapltvb6wz0p9vp/output_2_0.png" alt="output_2_0.png-10.8kB" title=""></p><div class="md-section-divider"></div><h3 data-anchor-id="5bo2" id="fromimport">from...import*</h3><p data-anchor-id="9x23">这提供了一个简单的方法来导入一个模块中的所有项目。然而这种声明不该被过多地使用。  <br>
-把一个模块的所有内容全都导入到当前的命名空间也是可行的，只需使用如下声明：</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="k0je" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">from</span><span class="pln"> datetime </span><span class="kwd">import</span><span class="pln"> </span><span class="pun">*</span></code></li></ol></pre><div class="md-section-divider"></div><h3 data-anchor-id="jwbd" id="fromimport语句">from...import语句：</h3><p data-anchor-id="tl4w">Python的from语句让你从模块中导入一个指定的部分到当前命名空间中。 </p><p data-anchor-id="ajxr">dir()函数一个排好序的字符串列表，返回的列表容纳了在一个模块里定义的所有模块，变量和函数。</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="wl9a" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">from</span><span class="pln"> datetime </span><span class="kwd">import</span><span class="pln"> time</span></code></li><li class="L1"><code class="language-python"></code></li><li class="L2"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">dir</span><span class="pun">(</span><span class="pln">time</span><span class="pun">))</span></code></li></ol></pre><pre data-anchor-id="vj9m"><code>['__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'dst', 'fold', 'hour', 'isoformat', 'max', 'microsecond', 'min', 'minute', 'replace', 'resolution', 'second', 'strftime', 'tzinfo', 'tzname', 'utcoffset']
-</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="u1jx" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">help</span><span class="pun">(</span><span class="pln">time</span><span class="pun">))</span></code></li></ol></pre><pre data-anchor-id="cshz"><code>Help on class time in module datetime:
-
-class time(builtins.object)
- |  time([hour[, minute[, second[, microsecond[, tzinfo]]]]]) --&gt; a time object
- |  
- |  All arguments are optional. tzinfo may be None, or an instance of
- |  a tzinfo subclass. The remaining arguments may be ints.
- |  
- |  Methods defined here:
- |  
- |  __eq__(self, value, /)
- |      Return self==value.
- |  
- |  __format__(...)
- |      Formats self with strftime.
- |  
- |  __ge__(self, value, /)
- |      Return self&gt;=value.
- |  
- |  __getattribute__(self, name, /)
- |      Return getattr(self, name).
- |  
- |  __gt__(self, value, /)
- |      Return self&gt;value.
- |  
- |  __hash__(self, /)
- |      Return hash(self).
- |  
- |  __le__(self, value, /)
- |      Return self&lt;=value.
- |  
- |  __lt__(self, value, /)
- |      Return self&lt;value.
- |  
- |  __ne__(self, value, /)
- |      Return self!=value.
- |  
- |  __new__(*args, **kwargs) from builtins.type
- |      Create and return a new object.  See help(type) for accurate signature.
- |  
- |  __reduce__(...)
- |      __reduce__() -&gt; (cls, state)
- |  
- |  __reduce_ex__(...)
- |      __reduce_ex__(proto) -&gt; (cls, state)
- |  
- |  __repr__(self, /)
- |      Return repr(self).
- |  
- |  __str__(self, /)
- |      Return str(self).
- |  
- |  dst(...)
- |      Return self.tzinfo.dst(self).
- |  
- |  isoformat(...)
- |      Return string in ISO 8601 format, [HH[:MM[:SS[.mmm[uuu]]]]][+HH:MM].
- |      
- |      timespec specifies what components of the time to include.
- |  
- |  replace(...)
- |      Return time with new specified fields.
- |  
- |  strftime(...)
- |      format -&gt; strftime() style string.
- |  
- |  tzname(...)
- |      Return self.tzinfo.tzname(self).
- |  
- |  utcoffset(...)
- |      Return self.tzinfo.utcoffset(self).
- |  
- |  ----------------------------------------------------------------------
- |  Data descriptors defined here:
- |  
- |  fold
- |  
- |  hour
- |  
- |  microsecond
- |  
- |  minute
- |  
- |  second
- |  
- |  tzinfo
- |  
- |  ----------------------------------------------------------------------
- |  Data and other attributes defined here:
- |  
- |  max = datetime.time(23, 59, 59, 999999)
- |  
- |  min = datetime.time(0, 0)
- |  
- |  resolution = datetime.timedelta(0, 0, 1)
-
-None
+    <div id="wmd-preview" class="wmd-preview wmd-preview-full-reader"><div class="md-section-divider"></div><div class="md-section-divider"></div><h1 id="python递归函数" data-anchor-id="55ya">Python递归函数</h1><p data-anchor-id="pcft">在函数内部，可以调用其他函数。如果一个函数在内部调用自身本身，这个函数就是递归函数。</p><p data-anchor-id="fuvq">可视化过程链接： <a href="http://www.pythontutor.com/visualize.html#mode=edit" target="_blank">http://www.pythontutor.com/visualize.html#mode=edit</a></p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="0wkb"><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">def</span><span class="pln"> fact</span><span class="pun">(</span><span class="pln">n</span><span class="pun">):</span></code></li><li class="L1"><code class="language-python"><span class="pln">    </span><span class="kwd">if</span><span class="pln"> n</span><span class="pun">==</span><span class="lit">1</span><span class="pun">:</span></code></li><li class="L2"><code class="language-python"><span class="pln">        </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">1</span></code></li><li class="L3"><code class="language-python"><span class="pln">    </span><span class="kwd">return</span><span class="pln"> n </span><span class="pun">*</span><span class="pln"> fact</span><span class="pun">(</span><span class="pln">n </span><span class="pun">-</span><span class="pln"> </span><span class="lit">1</span><span class="pun">)</span></code></li></ol></pre><p data-anchor-id="cj1w"><img title="" alt="recursion.png-5.5kB" src="http://static.zybuluo.com/Channelchan/pkc15evr9x797yhhy7kcaqzv/recursion.png"></p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="m12r"><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">fact</span><span class="pun">(</span><span class="lit">5</span><span class="pun">))</span></code></li></ol></pre><pre data-anchor-id="3yd8"><code>120
+</code></pre><div class="md-section-divider"></div><h2 id="ema计算" data-anchor-id="mbh7">EMA计算</h2><p data-anchor-id="x9vl"><img title="" alt="EMA.png-4.4kB" src="http://static.zybuluo.com/Channelchan/epip9nbdjg72qo3qyudhg3mq/EMA.png"></p><ol data-anchor-id="2skt">
+<li>自定义方法</li>
+<li>Pandas递归函数</li>
+<li>talib的EMA</li>
+</ol><div class="md-section-divider"></div><h3 id="1-自定义方法" data-anchor-id="3ci3">1. 自定义方法</h3><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="egpb"><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">import</span><span class="pln"> pandas </span><span class="kwd">as</span><span class="pln"> pd</span></code></li><li class="L1"><code class="language-python"></code></li><li class="L2"><code class="language-python"><span class="pln">a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">2</span><span class="pun">/</span><span class="lit">7</span></code></li><li class="L3"><code class="language-python"><span class="typ">Prices</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> list</span><span class="pun">(</span><span class="pln">range</span><span class="pun">(</span><span class="lit">10</span><span class="pun">))</span><span class="pln"> </span><span class="com">#prices</span></code></li><li class="L4"><code class="language-python"><span class="kwd">def</span><span class="pln"> ema </span><span class="pun">(</span><span class="pln"> N </span><span class="pun">,</span><span class="pln"> </span><span class="typ">Price</span><span class="pun">)</span><span class="pln"> </span><span class="pun">:</span></code></li><li class="L5"><code class="language-python"><span class="pln">    </span><span class="kwd">if</span><span class="pln"> N </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">1</span><span class="pun">:</span></code></li><li class="L6"><code class="language-python"><span class="pln">        </span><span class="kwd">return</span><span class="pln"> </span><span class="typ">Price</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span></code></li><li class="L7"><code class="language-python"><span class="pln">    </span><span class="kwd">return</span><span class="pln"> </span><span class="pun">(</span><span class="lit">1</span><span class="pun">-</span><span class="pln">a</span><span class="pun">)*</span><span class="pln">ema</span><span class="pun">(</span><span class="pln">N</span><span class="pun">-</span><span class="lit">1</span><span class="pun">,</span><span class="typ">Price</span><span class="pun">)</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> a</span><span class="pun">*</span><span class="typ">Price</span><span class="pun">[</span><span class="pln">N</span><span class="pun">]</span></code></li><li class="L8"><code class="language-python"></code></li><li class="L9"><code class="language-python"><span class="kwd">print</span><span class="pln"> </span><span class="pun">(</span><span class="pln">pd</span><span class="pun">.</span><span class="typ">Series</span><span class="pun">([</span><span class="pln">ema</span><span class="pun">(</span><span class="pln">i</span><span class="pun">,</span><span class="typ">Prices</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">for</span><span class="pln"> i </span><span class="kwd">in</span><span class="pln"> range</span><span class="pun">(</span><span class="lit">10</span><span class="pun">)]))</span></code></li></ol></pre><pre data-anchor-id="15m8"><code>0    0.000000
+1    0.285714
+2    0.775510
+3    1.411079
+4    2.150771
+5    2.964836
+6    3.832026
+7    4.737161
+8    5.669401
+9    6.621001
+dtype: float64
+</code></pre><div class="md-section-divider"></div><h3 id="2-pandas递归函数" data-anchor-id="vqsc">2. Pandas递归函数</h3><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="l6fg"><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">recursion_df </span><span class="pun">=</span><span class="pln"> pd</span><span class="pun">.</span><span class="typ">DataFrame</span><span class="pun">({</span><span class="str">'test'</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Prices</span><span class="pun">})</span></code></li><li class="L1"><code class="language-python"><span class="pln">recursion_result </span><span class="pun">=</span><span class="pln"> recursion_df</span><span class="pun">.</span><span class="pln">ewm</span><span class="pun">(</span><span class="pln">alpha</span><span class="pun">=</span><span class="lit">2</span><span class="pun">/</span><span class="lit">7</span><span class="pun">,</span><span class="pln"> adjust</span><span class="pun">=</span><span class="kwd">False</span><span class="pun">).</span><span class="pln">mean</span><span class="pun">()</span></code></li><li class="L2"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">recursion_result</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="kx5z"><code>       test
+0  0.000000
+1  0.285714
+2  0.775510
+3  1.411079
+4  2.150771
+5  2.964836
+6  3.832026
+7  4.737161
+8  5.669401
+9  6.621001
+</code></pre><div class="md-section-divider"></div><h3 id="3-talib的ema" data-anchor-id="z24n">3. talib的EMA</h3><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="bgo9"><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">import</span><span class="pln"> talib </span><span class="kwd">as</span><span class="pln"> ta</span></code></li><li class="L1"><code class="language-python"><span class="kwd">import</span><span class="pln"> numpy </span><span class="kwd">as</span><span class="pln"> np</span></code></li><li class="L2"><code class="language-python"></code></li><li class="L3"><code class="language-python"><span class="pln">EMA </span><span class="pun">=</span><span class="pln"> pd</span><span class="pun">.</span><span class="typ">Series</span><span class="pun">(</span><span class="pln">ta</span><span class="pun">.</span><span class="pln">EMA</span><span class="pun">(</span><span class="pln">np</span><span class="pun">.</span><span class="pln">array</span><span class="pun">(</span><span class="typ">Prices</span><span class="pun">,</span><span class="pln"> dtype</span><span class="pun">=</span><span class="pln">np</span><span class="pun">.</span><span class="pln">float64</span><span class="pun">),</span><span class="lit">6</span><span class="pun">))</span></code></li><li class="L4"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">EMA</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="vxm4"><code>0    NaN
+1    NaN
+2    NaN
+3    NaN
+4    NaN
+5    2.5
+6    3.5
+7    4.5
+8    5.5
+9    6.5
+dtype: float64
 </code></pre></div>
     <div class="remark-icons">
     </div>
@@ -1358,7 +1295,7 @@ None
     <li class="file-item item" file-created-date="2018-03-21T02:10:25.000000Z">
         <a tabindex="-1" href="https://www.zybuluo.com/Channelchan/note/1081375" title="【已发布】 2018-03-21T02:16:53.000000Z">
         <i class="icon-share-sign"></i>
-        <span id="1081375">Python递归函数</span>
+        <span id="1081375" class="whiter-on-black">Python递归函数</span>
         </a>
     </li>
 
@@ -2150,7 +2087,7 @@ None
     <li class="file-item item" file-created-date="2017-03-03T01:28:57.000000Z">
         <a tabindex="-1" href="https://www.zybuluo.com/Channelchan/note/644665" title="【已发布】 2018-03-21T02:07:58.000000Z">
         <i class="icon-share-sign"></i>
-        <span id="644665" class="whiter-on-black">Python模块导入</span>
+        <span id="644665">Python模块导入</span>
         </a>
     </li>
 
@@ -2405,15 +2342,15 @@ None
             // '' means not logged in, otherwise the logged in username, for mdeditor.mako, this value will be reset in render.js otherwise, for user_note.mako, it's rendered by server side.
             loggedInUsername: '',
             isPageOwner: 'False' === 'True' ? true : false,
-            loginComeFromUrl: 'https://www.zybuluo.com/login?return_to=https%3A%2F%2Fwww.zybuluo.com%2FChannelchan%2Fnote%2F644665',
-            noteRemarksUrl: "https://www.zybuluo.com/note/644665/remarks", 
-            newNoteRemarkUrl: "https://www.zybuluo.com/note/644665/remark/new", 
-            updateNoteRemarkUrl: "https://www.zybuluo.com/note/644665/remark/update", 
-            deleteNoteRemarkUrl: "https://www.zybuluo.com/note/644665/remark/delete", 
-            publishNoteRemarkUrl: "https://www.zybuluo.com/note/644665/remark/publish", 
-            newNoteRemarkReplyUrl: "https://www.zybuluo.com/note/644665/remark_reply/new", 
-            updateNoteRemarkReplyUrl: "https://www.zybuluo.com/note/644665/remark_reply/update", 
-            deleteNoteRemarkReplyUrl: "https://www.zybuluo.com/note/644665/remark_reply/delete", 
+            loginComeFromUrl: 'https://www.zybuluo.com/login?return_to=https%3A%2F%2Fwww.zybuluo.com%2FChannelchan%2Fnote%2F1081375',
+            noteRemarksUrl: "https://www.zybuluo.com/note/1081375/remarks", 
+            newNoteRemarkUrl: "https://www.zybuluo.com/note/1081375/remark/new", 
+            updateNoteRemarkUrl: "https://www.zybuluo.com/note/1081375/remark/update", 
+            deleteNoteRemarkUrl: "https://www.zybuluo.com/note/1081375/remark/delete", 
+            publishNoteRemarkUrl: "https://www.zybuluo.com/note/1081375/remark/publish", 
+            newNoteRemarkReplyUrl: "https://www.zybuluo.com/note/1081375/remark_reply/new", 
+            updateNoteRemarkReplyUrl: "https://www.zybuluo.com/note/1081375/remark_reply/update", 
+            deleteNoteRemarkReplyUrl: "https://www.zybuluo.com/note/1081375/remark_reply/delete", 
         };
 
         // BEGIN: pace.js configuration

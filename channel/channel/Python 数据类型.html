@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     
-    <title>Python模块导入 - 作业部落 Cmd Markdown 编辑阅读器</title>
+    <title>Python数据类型 - 作业部落 Cmd Markdown 编辑阅读器</title>
 
 
     <link href="https://www.zybuluo.com/static/img/favicon.png" type="image/x-icon" rel="icon">
@@ -69,111 +69,51 @@
         <span>
             <code>@Channelchan</code>
         </span>
-        <code><span class="article-updated-date">2018-03-21T02:07:58.000000Z</span></code>
-        <code><span>字数 </span><span class="article-characters">2465</span></code>
-        <code><span>阅读 </span><span class="article-read">118333</span></code>
+        <code><span class="article-updated-date">2017-11-21T11:09:22.000000Z</span></code>
+        <code><span>字数 </span><span class="article-characters">1790</span></code>
+        <code><span>阅读 </span><span class="article-read">119963</span></code>
     </div>
-    <div id="wmd-preview" class="wmd-preview wmd-preview-full-reader"><div class="md-section-divider"></div><div class="md-section-divider"></div><h2 data-anchor-id="aymh" id="python模块导入">Python模块导入</h2><div class="md-section-divider"></div><h3 data-anchor-id="fgo3" id="import">import</h3><p data-anchor-id="uxtu">想使用Python源文件，只需在另一个源文件里执行import语句，语法如下：</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="1cao" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">import</span><span class="pln"> numpy</span></code></li><li class="L1"><code class="language-python"><span class="pln">n</span><span class="pun">=</span><span class="pln">numpy</span><span class="pun">.</span><span class="pln">array</span><span class="pun">([[</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2</span><span class="pun">],[</span><span class="lit">3</span><span class="pun">,</span><span class="pln"> </span><span class="lit">4</span><span class="pun">]])</span></code></li><li class="L2"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">n</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="s7br"><code>[[1 2]
- [3 4]]
-</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="6yd4" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">import</span><span class="pln"> matplotlib</span><span class="pun">.</span><span class="pln">pyplot </span><span class="kwd">as</span><span class="pln"> plt</span></code></li><li class="L1"><code class="language-python"><span class="pln">plt</span><span class="pun">.</span><span class="pln">plot</span><span class="pun">(</span><span class="pln">n</span><span class="pun">)</span></code></li><li class="L2"><code class="language-python"><span class="pln">plt</span><span class="pun">.</span><span class="pln">show</span><span class="pun">()</span></code></li></ol></pre><p data-anchor-id="9c3t"><img src="http://static.zybuluo.com/Channelchan/nghu43i1yxapltvb6wz0p9vp/output_2_0.png" alt="output_2_0.png-10.8kB" title=""></p><div class="md-section-divider"></div><h3 data-anchor-id="5bo2" id="fromimport">from...import*</h3><p data-anchor-id="9x23">这提供了一个简单的方法来导入一个模块中的所有项目。然而这种声明不该被过多地使用。  <br>
-把一个模块的所有内容全都导入到当前的命名空间也是可行的，只需使用如下声明：</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="k0je" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">from</span><span class="pln"> datetime </span><span class="kwd">import</span><span class="pln"> </span><span class="pun">*</span></code></li></ol></pre><div class="md-section-divider"></div><h3 data-anchor-id="jwbd" id="fromimport语句">from...import语句：</h3><p data-anchor-id="tl4w">Python的from语句让你从模块中导入一个指定的部分到当前命名空间中。 </p><p data-anchor-id="ajxr">dir()函数一个排好序的字符串列表，返回的列表容纳了在一个模块里定义的所有模块，变量和函数。</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="wl9a" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">from</span><span class="pln"> datetime </span><span class="kwd">import</span><span class="pln"> time</span></code></li><li class="L1"><code class="language-python"></code></li><li class="L2"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">dir</span><span class="pun">(</span><span class="pln">time</span><span class="pun">))</span></code></li></ol></pre><pre data-anchor-id="vj9m"><code>['__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'dst', 'fold', 'hour', 'isoformat', 'max', 'microsecond', 'min', 'minute', 'replace', 'resolution', 'second', 'strftime', 'tzinfo', 'tzname', 'utcoffset']
-</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="u1jx" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">help</span><span class="pun">(</span><span class="pln">time</span><span class="pun">))</span></code></li></ol></pre><pre data-anchor-id="cshz"><code>Help on class time in module datetime:
+    <div id="wmd-preview" class="wmd-preview wmd-preview-full-reader"><div class="md-section-divider"></div><div class="md-section-divider"></div><h1 data-anchor-id="6sax" id="python数据类型">Python数据类型</h1><div class="md-section-divider"></div><h2 data-anchor-id="u003" id="数字number">- 数字(Number)</h2><p data-anchor-id="kcm2">最常用的数字类型包括整型数(int),浮点型(float),正负数皆可。</p><div class="md-section-divider"></div><h3 data-anchor-id="m8sk" id="整数型int">整数型(int)</h3><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="rvq2" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">a</span><span class="pun">=</span><span class="lit">666</span></code></li><li class="L1"><code class="language-python"><span class="pln">type</span><span class="pun">(</span><span class="pln">a</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="opny"><code>int
+</code></pre><div class="md-section-divider"></div><h3 data-anchor-id="nesi" id="浮点型float">浮点型(float)</h3><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="c5kg" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">b</span><span class="pun">=-</span><span class="lit">6.66</span></code></li><li class="L1"><code class="language-python"><span class="pln">type</span><span class="pun">(</span><span class="pln">b</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="dqsn"><code>float
+</code></pre><div class="md-section-divider"></div><h3 data-anchor-id="3q8z" id="布尔值boolean">布尔值(Boolean)</h3><p data-anchor-id="3e9r">主要用于判断真假，True代表真，False代表假。</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="y52v" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">i</span><span class="pun">=</span><span class="lit">1</span></code></li><li class="L1"><code class="language-python"><span class="pln">i</span><span class="pun">&gt;</span><span class="lit">0</span></code></li></ol></pre><pre data-anchor-id="bptf"><code>True
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="18sx" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">i</span><span class="pun">&lt;</span><span class="lit">0</span></code></li></ol></pre><pre data-anchor-id="gkf1"><code>False
+</code></pre><div class="md-section-divider"></div><h2 data-anchor-id="47kq" id="序列有顺序">- 序列(有顺序)</h2><div class="md-section-divider"></div><h3 data-anchor-id="ghp3" id="字符串">字符串</h3><p data-anchor-id="e7jc">字符串或串(String)是由数字、字母、下划线组成的一串字符。用引号限制起来。</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="ggvq" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">string</span><span class="pun">=</span><span class="str">'大鱼金融是你身边No_1的Quantitative Trader'</span></code></li></ol></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="g13e" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">string</span><span class="pun">[</span><span class="lit">0</span><span class="pun">:</span><span class="lit">4</span><span class="pun">]</span></code></li></ol></pre><pre data-anchor-id="onmp"><code>'大鱼金融'
+</code></pre><div class="md-section-divider"></div><h3 data-anchor-id="pkxn" id="元组">元组</h3><p data-anchor-id="dp0r">提醒：Python默认索引的起始值为0，不为1。 </p><p data-anchor-id="iole">元组是一系列Python数据类型安装顺序组成的序列。用小括号表征。报错由于元组内容不可变。</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="ki1k" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">t</span><span class="pun">=(</span><span class="lit">6</span><span class="pun">,</span><span class="str">'abc'</span><span class="pun">,</span><span class="lit">0.1</span><span class="pun">)</span></code></li></ol></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="8ubz" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">t</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span></code></li></ol></pre><pre data-anchor-id="zc31"><code>6
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="hl59" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">t</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]</span></code></li></ol></pre><pre data-anchor-id="efok"><code>'abc'
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="1sq0" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">t</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]=</span><span class="lit">666</span></code></li></ol></pre><pre data-anchor-id="pesz"><code>---------------------------------------------------------------------------
 
-class time(builtins.object)
- |  time([hour[, minute[, second[, microsecond[, tzinfo]]]]]) --&gt; a time object
- |  
- |  All arguments are optional. tzinfo may be None, or an instance of
- |  a tzinfo subclass. The remaining arguments may be ints.
- |  
- |  Methods defined here:
- |  
- |  __eq__(self, value, /)
- |      Return self==value.
- |  
- |  __format__(...)
- |      Formats self with strftime.
- |  
- |  __ge__(self, value, /)
- |      Return self&gt;=value.
- |  
- |  __getattribute__(self, name, /)
- |      Return getattr(self, name).
- |  
- |  __gt__(self, value, /)
- |      Return self&gt;value.
- |  
- |  __hash__(self, /)
- |      Return hash(self).
- |  
- |  __le__(self, value, /)
- |      Return self&lt;=value.
- |  
- |  __lt__(self, value, /)
- |      Return self&lt;value.
- |  
- |  __ne__(self, value, /)
- |      Return self!=value.
- |  
- |  __new__(*args, **kwargs) from builtins.type
- |      Create and return a new object.  See help(type) for accurate signature.
- |  
- |  __reduce__(...)
- |      __reduce__() -&gt; (cls, state)
- |  
- |  __reduce_ex__(...)
- |      __reduce_ex__(proto) -&gt; (cls, state)
- |  
- |  __repr__(self, /)
- |      Return repr(self).
- |  
- |  __str__(self, /)
- |      Return str(self).
- |  
- |  dst(...)
- |      Return self.tzinfo.dst(self).
- |  
- |  isoformat(...)
- |      Return string in ISO 8601 format, [HH[:MM[:SS[.mmm[uuu]]]]][+HH:MM].
- |      
- |      timespec specifies what components of the time to include.
- |  
- |  replace(...)
- |      Return time with new specified fields.
- |  
- |  strftime(...)
- |      format -&gt; strftime() style string.
- |  
- |  tzname(...)
- |      Return self.tzinfo.tzname(self).
- |  
- |  utcoffset(...)
- |      Return self.tzinfo.utcoffset(self).
- |  
- |  ----------------------------------------------------------------------
- |  Data descriptors defined here:
- |  
- |  fold
- |  
- |  hour
- |  
- |  microsecond
- |  
- |  minute
- |  
- |  second
- |  
- |  tzinfo
- |  
- |  ----------------------------------------------------------------------
- |  Data and other attributes defined here:
- |  
- |  max = datetime.time(23, 59, 59, 999999)
- |  
- |  min = datetime.time(0, 0)
- |  
- |  resolution = datetime.timedelta(0, 0, 1)
+TypeError                                 Traceback (most recent call last)
 
-None
+&lt;ipython-input-10-b98c09a85d62&gt; in &lt;module&gt;()
+----&gt; 1 t[0]=666
+
+
+TypeError: 'tuple' object does not support item assignment
+</code></pre><div class="md-section-divider"></div><h3 data-anchor-id="jjr3" id="列表">列表</h3><p data-anchor-id="gf4u">列表和元组功能上类似，但表达方法不同，列表用[]表示。列表内容可修改。</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="2hbn" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">l </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="lit">6</span><span class="pun">,</span><span class="str">'abc'</span><span class="pun">,</span><span class="lit">0.1</span><span class="pun">]</span></code></li></ol></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="oiv8" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">l</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span></code></li></ol></pre><pre data-anchor-id="8kne"><code>6
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="p4l5" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">l</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]=</span><span class="lit">666</span></code></li><li class="L1"><code class="language-python"><span class="pln">l</span></code></li></ol></pre><pre data-anchor-id="5fsw"><code>[666, 'abc', 0.1]
+</code></pre><div class="md-section-divider"></div><h2 data-anchor-id="yuy2" id="映射-键值对应无序">- 映射 (键值对应，无序)</h2><div class="md-section-divider"></div><h3 data-anchor-id="c5dc" id="字典">字典</h3><p data-anchor-id="rqdc">字典是非常实用的数据结构，它包括了多组键(Key):值(Value)。字典用{}表示。</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="ogoh" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">d</span><span class="pun">={}</span></code></li><li class="L1"><code class="language-python"><span class="pln">d</span><span class="pun">[</span><span class="str">'microsoft'</span><span class="pun">]=</span><span class="lit">100</span></code></li><li class="L2"><code class="language-python"><span class="pln">d</span><span class="pun">[</span><span class="str">'apple'</span><span class="pun">]=</span><span class="pln"> </span><span class="lit">150</span></code></li><li class="L3"><code class="language-python"><span class="pln">d</span><span class="pun">[</span><span class="str">'google'</span><span class="pun">]=</span><span class="lit">200</span></code></li></ol></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="1ahz" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">d</span></code></li></ol></pre><pre data-anchor-id="dhc8"><code>{'apple': 150, 'google': 200, 'microsoft': 100}
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="e3c7" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">d</span><span class="pun">[</span><span class="str">'apple'</span><span class="pun">]</span></code></li></ol></pre><pre data-anchor-id="dgxi"><code>150
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="3het" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">d</span><span class="pun">.</span><span class="pln">keys</span><span class="pun">()</span></code></li></ol></pre><pre data-anchor-id="o0gg"><code>dict_keys(['microsoft', 'apple', 'google'])
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="ei86" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">d</span><span class="pun">.</span><span class="pln">values</span><span class="pun">()</span></code></li></ol></pre><pre data-anchor-id="zed5"><code>dict_values([100, 150, 200])
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="vdc0" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">d</span><span class="pun">.</span><span class="pln">get</span><span class="pun">(</span><span class="str">'apple'</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="6dkc"><code>150
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="e0w4" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="com"># 修改</span></code></li><li class="L1"><code class="language-python"><span class="pln">d</span><span class="pun">[</span><span class="str">'apple'</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">50</span></code></li><li class="L2"><code class="language-python"><span class="pln">d</span></code></li></ol></pre><pre data-anchor-id="jpg9"><code>{'apple': 50, 'google': 200, 'microsoft': 100}
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="icoz" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="com"># 删除</span></code></li><li class="L1"><code class="language-python"><span class="kwd">del</span><span class="pln"> d</span><span class="pun">[</span><span class="str">'apple'</span><span class="pun">]</span></code></li><li class="L2"><code class="language-python"><span class="pln">d</span></code></li></ol></pre><pre data-anchor-id="wnx5"><code>{'google': 200, 'microsoft': 100}
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="h73d" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="com"># 添加字典</span></code></li><li class="L1"><code class="language-python"><span class="pln">d</span><span class="pun">.</span><span class="pln">update</span><span class="pun">({</span><span class="str">'apple'</span><span class="pun">:</span><span class="lit">50</span><span class="pun">})</span></code></li><li class="L2"><code class="language-python"><span class="pln">d</span></code></li></ol></pre><pre data-anchor-id="spev"><code>{'apple': 50, 'google': 200, 'microsoft': 100}
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="oyhd" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="com"># pop删除</span></code></li><li class="L1"><code class="language-python"><span class="pln">d</span><span class="pun">.</span><span class="pln">pop</span><span class="pun">(</span><span class="str">'apple'</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="eia1"><code>50
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="0bmh" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">d</span></code></li></ol></pre><pre data-anchor-id="uh3u"><code>{'google': 200, 'microsoft': 100}
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="rpwr" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">for</span><span class="pln"> k</span><span class="pun">,</span><span class="pln">v </span><span class="kwd">in</span><span class="pln"> d</span><span class="pun">.</span><span class="pln">items</span><span class="pun">():</span></code></li><li class="L1"><code class="language-python"><span class="pln">    </span><span class="kwd">print</span><span class="pln"> </span><span class="pun">(</span><span class="pln">k</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="1szt"><code>microsoft
+google
+</code></pre><div class="md-section-divider"></div><h3 data-anchor-id="zfpe" id="集合">集合</h3><p data-anchor-id="kcva">函数创建一个无序不重复元素集，可进行关系测试，删除重复数据，还可以计算交集、差集、并集等。</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="465l" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">x </span><span class="pun">=</span><span class="pln"> set</span><span class="pun">(</span><span class="str">'apple'</span><span class="pun">)</span></code></li><li class="L1"><code class="language-python"><span class="pln">y </span><span class="pun">=</span><span class="pln"> set</span><span class="pun">(</span><span class="str">'google'</span><span class="pun">)</span></code></li><li class="L2"><code class="language-python"><span class="pln">z </span><span class="pun">=</span><span class="pln"> set</span><span class="pun">([</span><span class="lit">0</span><span class="pun">,</span><span class="lit">0</span><span class="pun">,</span><span class="lit">0</span><span class="pun">,</span><span class="lit">1</span><span class="pun">,</span><span class="lit">1</span><span class="pun">,</span><span class="lit">1</span><span class="pun">,</span><span class="lit">2</span><span class="pun">,</span><span class="lit">1</span><span class="pun">,</span><span class="lit">3</span><span class="pun">,</span><span class="lit">4</span><span class="pun">,</span><span class="lit">5</span><span class="pun">,</span><span class="lit">6</span><span class="pun">,</span><span class="lit">5</span><span class="pun">,</span><span class="lit">6</span><span class="pun">,</span><span class="lit">6</span><span class="pun">])</span></code></li></ol></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="kogy" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="com">#无序去重</span></code></li><li class="L1"><code class="language-python"><span class="pln">x</span></code></li></ol></pre><pre data-anchor-id="lvo5"><code>{'a', 'e', 'l', 'p'}
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="36x6" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">y</span></code></li></ol></pre><pre data-anchor-id="a1sd"><code>{'e', 'g', 'l', 'o'}
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="vqrg" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">z</span></code></li></ol></pre><pre data-anchor-id="9q8k"><code>{0, 1, 2, 3, 4, 5, 6}
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="0x4y" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="com"># 交集</span></code></li><li class="L1"><code class="language-python"><span class="pln">x</span><span class="pun">&amp;</span><span class="pln">y</span></code></li></ol></pre><pre data-anchor-id="1o04"><code>{'e', 'l'}
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="usu7" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="com"># 并集</span></code></li><li class="L1"><code class="language-python"><span class="pln">x</span><span class="pun">|</span><span class="pln">z</span></code></li></ol></pre><pre data-anchor-id="wjtf"><code>{0, 1, 2, 3, 4, 'l', 5, 6, 'a', 'e', 'p'}
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="caw8" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="com"># 差集</span></code></li><li class="L1"><code class="language-python"><span class="pln">x</span><span class="pun">-</span><span class="pln">y</span></code></li></ol></pre><pre data-anchor-id="09w8"><code>{'a', 'p'}
+</code></pre><div class="md-section-divider"></div><h2 data-anchor-id="sn64" id="数据转换">- 数据转换</h2><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="e0p7" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">t </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="lit">1</span><span class="pun">,</span><span class="lit">2</span><span class="pun">,</span><span class="lit">3</span><span class="pun">,</span><span class="lit">4</span><span class="pun">,</span><span class="lit">5</span><span class="pun">,</span><span class="lit">6</span><span class="pun">,</span><span class="lit">6</span><span class="pun">,</span><span class="lit">6</span><span class="pun">,</span><span class="lit">6</span><span class="pun">)</span></code></li></ol></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="tjza" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">list</span><span class="pun">(</span><span class="pln">t</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="gvhx"><code>[1, 2, 3, 4, 5, 6, 6, 6, 6]
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="hjad" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">tuple</span><span class="pun">(</span><span class="pln">t</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="hhwh"><code>(1, 2, 3, 4, 5, 6, 6, 6, 6)
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="qvwx" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">set</span><span class="pun">(</span><span class="pln">t</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="b33i"><code>{1, 2, 3, 4, 5, 6}
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="y6iw" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">keys </span><span class="pun">=</span><span class="pln"> list</span><span class="pun">(</span><span class="pln">set</span><span class="pun">(</span><span class="pln">t</span><span class="pun">))</span></code></li></ol></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="whsr" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">values </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="str">'a'</span><span class="pun">,</span><span class="str">'b'</span><span class="pun">,</span><span class="str">'c'</span><span class="pun">,</span><span class="str">'d'</span><span class="pun">,</span><span class="str">'e'</span><span class="pun">,</span><span class="str">'f'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'g'</span><span class="pun">]</span></code></li></ol></pre><div class="md-section-divider"></div><h3 data-anchor-id="qw3c" id="zip">zip()</h3><p data-anchor-id="z1q7">函数用于将可迭代的对象作为参数，将对象中对应的元素打包成一个个元组，然后返回由这些元组组成的列表。</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="u9bc" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">list</span><span class="pun">(</span><span class="pln">zip</span><span class="pun">(</span><span class="pln">keys</span><span class="pun">,</span><span class="pln"> values</span><span class="pun">))</span></code></li></ol></pre><pre data-anchor-id="qbvz"><code>[(1, 'a'), (2, 'b'), (3, 'c'), (4, 'd'), (5, 'e'), (6, 'f')]
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="4rn7" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">dict</span><span class="pun">(</span><span class="pln">zip</span><span class="pun">(</span><span class="pln">keys</span><span class="pun">,</span><span class="pln"> values</span><span class="pun">))</span></code></li></ol></pre><pre data-anchor-id="qq4z"><code>{1: 'a', 2: 'b', 3: 'c', 4: 'd', 5: 'e', 6: 'f'}
 </code></pre></div>
     <div class="remark-icons">
     </div>
@@ -2150,7 +2090,7 @@ None
     <li class="file-item item" file-created-date="2017-03-03T01:28:57.000000Z">
         <a tabindex="-1" href="https://www.zybuluo.com/Channelchan/note/644665" title="【已发布】 2018-03-21T02:07:58.000000Z">
         <i class="icon-share-sign"></i>
-        <span id="644665" class="whiter-on-black">Python模块导入</span>
+        <span id="644665">Python模块导入</span>
         </a>
     </li>
 
@@ -2174,7 +2114,7 @@ None
     <li class="file-item item" file-created-date="2017-03-03T01:26:23.000000Z">
         <a tabindex="-1" href="https://www.zybuluo.com/Channelchan/note/644599" title="【已发布】 2017-11-21T11:09:22.000000Z">
         <i class="icon-share-sign"></i>
-        <span id="644599">Python数据类型</span>
+        <span id="644599" class="whiter-on-black">Python数据类型</span>
         </a>
     </li>
 
@@ -2405,15 +2345,15 @@ None
             // '' means not logged in, otherwise the logged in username, for mdeditor.mako, this value will be reset in render.js otherwise, for user_note.mako, it's rendered by server side.
             loggedInUsername: '',
             isPageOwner: 'False' === 'True' ? true : false,
-            loginComeFromUrl: 'https://www.zybuluo.com/login?return_to=https%3A%2F%2Fwww.zybuluo.com%2FChannelchan%2Fnote%2F644665',
-            noteRemarksUrl: "https://www.zybuluo.com/note/644665/remarks", 
-            newNoteRemarkUrl: "https://www.zybuluo.com/note/644665/remark/new", 
-            updateNoteRemarkUrl: "https://www.zybuluo.com/note/644665/remark/update", 
-            deleteNoteRemarkUrl: "https://www.zybuluo.com/note/644665/remark/delete", 
-            publishNoteRemarkUrl: "https://www.zybuluo.com/note/644665/remark/publish", 
-            newNoteRemarkReplyUrl: "https://www.zybuluo.com/note/644665/remark_reply/new", 
-            updateNoteRemarkReplyUrl: "https://www.zybuluo.com/note/644665/remark_reply/update", 
-            deleteNoteRemarkReplyUrl: "https://www.zybuluo.com/note/644665/remark_reply/delete", 
+            loginComeFromUrl: 'https://www.zybuluo.com/login?return_to=https%3A%2F%2Fwww.zybuluo.com%2FChannelchan%2Fnote%2F644599',
+            noteRemarksUrl: "https://www.zybuluo.com/note/644599/remarks", 
+            newNoteRemarkUrl: "https://www.zybuluo.com/note/644599/remark/new", 
+            updateNoteRemarkUrl: "https://www.zybuluo.com/note/644599/remark/update", 
+            deleteNoteRemarkUrl: "https://www.zybuluo.com/note/644599/remark/delete", 
+            publishNoteRemarkUrl: "https://www.zybuluo.com/note/644599/remark/publish", 
+            newNoteRemarkReplyUrl: "https://www.zybuluo.com/note/644599/remark_reply/new", 
+            updateNoteRemarkReplyUrl: "https://www.zybuluo.com/note/644599/remark_reply/update", 
+            deleteNoteRemarkReplyUrl: "https://www.zybuluo.com/note/644599/remark_reply/delete", 
         };
 
         // BEGIN: pace.js configuration

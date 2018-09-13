@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     
-    <title>Python模块导入 - 作业部落 Cmd Markdown 编辑阅读器</title>
+    <title>Python高级特性 - 作业部落 Cmd Markdown 编辑阅读器</title>
 
 
     <link href="https://www.zybuluo.com/static/img/favicon.png" type="image/x-icon" rel="icon">
@@ -69,111 +69,67 @@
         <span>
             <code>@Channelchan</code>
         </span>
-        <code><span class="article-updated-date">2018-03-21T02:07:58.000000Z</span></code>
-        <code><span>字数 </span><span class="article-characters">2465</span></code>
-        <code><span>阅读 </span><span class="article-read">118333</span></code>
+        <code><span class="article-updated-date">2018-03-21T02:28:51.000000Z</span></code>
+        <code><span>字数 </span><span class="article-characters">2194</span></code>
+        <code><span>阅读 </span><span class="article-read">37002</span></code>
     </div>
-    <div id="wmd-preview" class="wmd-preview wmd-preview-full-reader"><div class="md-section-divider"></div><div class="md-section-divider"></div><h2 data-anchor-id="aymh" id="python模块导入">Python模块导入</h2><div class="md-section-divider"></div><h3 data-anchor-id="fgo3" id="import">import</h3><p data-anchor-id="uxtu">想使用Python源文件，只需在另一个源文件里执行import语句，语法如下：</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="1cao" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">import</span><span class="pln"> numpy</span></code></li><li class="L1"><code class="language-python"><span class="pln">n</span><span class="pun">=</span><span class="pln">numpy</span><span class="pun">.</span><span class="pln">array</span><span class="pun">([[</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2</span><span class="pun">],[</span><span class="lit">3</span><span class="pun">,</span><span class="pln"> </span><span class="lit">4</span><span class="pun">]])</span></code></li><li class="L2"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">n</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="s7br"><code>[[1 2]
- [3 4]]
-</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="6yd4" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">import</span><span class="pln"> matplotlib</span><span class="pun">.</span><span class="pln">pyplot </span><span class="kwd">as</span><span class="pln"> plt</span></code></li><li class="L1"><code class="language-python"><span class="pln">plt</span><span class="pun">.</span><span class="pln">plot</span><span class="pun">(</span><span class="pln">n</span><span class="pun">)</span></code></li><li class="L2"><code class="language-python"><span class="pln">plt</span><span class="pun">.</span><span class="pln">show</span><span class="pun">()</span></code></li></ol></pre><p data-anchor-id="9c3t"><img src="http://static.zybuluo.com/Channelchan/nghu43i1yxapltvb6wz0p9vp/output_2_0.png" alt="output_2_0.png-10.8kB" title=""></p><div class="md-section-divider"></div><h3 data-anchor-id="5bo2" id="fromimport">from...import*</h3><p data-anchor-id="9x23">这提供了一个简单的方法来导入一个模块中的所有项目。然而这种声明不该被过多地使用。  <br>
-把一个模块的所有内容全都导入到当前的命名空间也是可行的，只需使用如下声明：</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="k0je" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">from</span><span class="pln"> datetime </span><span class="kwd">import</span><span class="pln"> </span><span class="pun">*</span></code></li></ol></pre><div class="md-section-divider"></div><h3 data-anchor-id="jwbd" id="fromimport语句">from...import语句：</h3><p data-anchor-id="tl4w">Python的from语句让你从模块中导入一个指定的部分到当前命名空间中。 </p><p data-anchor-id="ajxr">dir()函数一个排好序的字符串列表，返回的列表容纳了在一个模块里定义的所有模块，变量和函数。</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="wl9a" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">from</span><span class="pln"> datetime </span><span class="kwd">import</span><span class="pln"> time</span></code></li><li class="L1"><code class="language-python"></code></li><li class="L2"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">dir</span><span class="pun">(</span><span class="pln">time</span><span class="pun">))</span></code></li></ol></pre><pre data-anchor-id="vj9m"><code>['__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'dst', 'fold', 'hour', 'isoformat', 'max', 'microsecond', 'min', 'minute', 'replace', 'resolution', 'second', 'strftime', 'tzinfo', 'tzname', 'utcoffset']
-</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="u1jx" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">help</span><span class="pun">(</span><span class="pln">time</span><span class="pun">))</span></code></li></ol></pre><pre data-anchor-id="cshz"><code>Help on class time in module datetime:
+    <div id="wmd-preview" class="wmd-preview wmd-preview-full-reader"><div class="md-section-divider"></div><div class="md-section-divider"></div><h1 id="python高级特性" data-anchor-id="fckr">Python高级特性</h1><p data-anchor-id="lvut">Python中非常有用的高级特性，1行代码能实现的功能，决不写5行代码。</p><div class="md-section-divider"></div><h2 id="切片" data-anchor-id="izq7">切片</h2><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="nn6e"><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">L </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="str">'MSFT'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'APPL'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'IBKR'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'GOOG'</span><span class="pun">]</span></code></li></ol></pre><p data-anchor-id="27zh"><strong>位置读取</strong></p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="59pr"><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">print</span><span class="pun">([</span><span class="pln">L</span><span class="pun">[</span><span class="lit">0</span><span class="pun">],</span><span class="pln"> L</span><span class="pun">[</span><span class="lit">1</span><span class="pun">],</span><span class="pln"> L</span><span class="pun">[</span><span class="lit">2</span><span class="pun">]])</span></code></li></ol></pre><pre data-anchor-id="9lq2"><code>['MSFT', 'APPL', 'IBKR']
+</code></pre><p data-anchor-id="nyui"><strong>循环读取</strong></p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="dcir"><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">r </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[]</span></code></li><li class="L1"><code class="language-python"><span class="pln">n </span><span class="pun">=</span><span class="pln"> </span><span class="lit">3</span></code></li><li class="L2"><code class="language-python"><span class="kwd">for</span><span class="pln"> i </span><span class="kwd">in</span><span class="pln"> range</span><span class="pun">(</span><span class="pln">n</span><span class="pun">):</span></code></li><li class="L3"><code class="language-python"><span class="pln">    r</span><span class="pun">.</span><span class="pln">append</span><span class="pun">(</span><span class="pln">L</span><span class="pun">[</span><span class="pln">i</span><span class="pun">])</span></code></li><li class="L4"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">r</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="pjij"><code>['MSFT', 'APPL', 'IBKR']
+</code></pre><p data-anchor-id="hzmo"><strong>切片读取</strong></p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="ha2m"><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">L</span><span class="pun">[</span><span class="lit">0</span><span class="pun">:</span><span class="lit">3</span><span class="pun">])</span></code></li></ol></pre><pre data-anchor-id="46un"><code>['MSFT', 'APPL', 'IBKR']
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="8hrf"><ol class="linenums"><li class="L0"><code class="language-python"><span class="com"># 如果第一个索引是0,可省略。</span></code></li><li class="L1"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">L</span><span class="pun">[:</span><span class="lit">3</span><span class="pun">])</span></code></li></ol></pre><pre data-anchor-id="atv1"><code>['MSFT', 'APPL', 'IBKR']
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="cf8f"><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">L</span><span class="pun">[</span><span class="lit">1</span><span class="pun">:</span><span class="lit">3</span><span class="pun">])</span></code></li></ol></pre><pre data-anchor-id="feav"><code>['APPL', 'IBKR']
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="bfda"><ol class="linenums"><li class="L0"><code class="language-python"><span class="com"># 支持L[-1]取倒数第一个元素，同样支持倒数切片。</span></code></li><li class="L1"><code class="language-python"><span class="pln">L</span><span class="pun">[-</span><span class="lit">2</span><span class="pun">:]</span></code></li></ol></pre><pre data-anchor-id="81rw"><code>['IBKR', 'GOOG']
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="qh43"><ol class="linenums"><li class="L0"><code class="language-python"><span class="com"># 创建一个0到19的列表</span></code></li><li class="L1"><code class="language-python"><span class="pln">L2 </span><span class="pun">=</span><span class="pln"> list</span><span class="pun">(</span><span class="pln">range</span><span class="pun">(</span><span class="lit">20</span><span class="pun">))</span></code></li></ol></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="vc5h"><ol class="linenums"><li class="L0"><code class="language-python"><span class="com"># 取0到9的数字，间隔为2</span></code></li><li class="L1"><code class="language-python"><span class="pln">L2</span><span class="pun">[:</span><span class="lit">10</span><span class="pun">:</span><span class="lit">2</span><span class="pun">]</span></code></li></ol></pre><pre data-anchor-id="ce14"><code>[0, 2, 4, 6, 8]
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="bxcq"><ol class="linenums"><li class="L0"><code class="language-python"><span class="com"># 取全数据，间隔为5</span></code></li><li class="L1"><code class="language-python"><span class="pln">L2</span><span class="pun">[::</span><span class="lit">5</span><span class="pun">]</span></code></li></ol></pre><pre data-anchor-id="6ijd"><code>[0, 5, 10, 15]
+</code></pre><div class="md-section-divider"></div><h2 id="迭代" data-anchor-id="f44w">迭代</h2><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="75ff"><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">d </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="str">'a'</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="str">'b'</span><span class="pun">:</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln"> </span><span class="str">'c'</span><span class="pun">:</span><span class="pln"> </span><span class="lit">3</span><span class="pun">}</span></code></li></ol></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="emmk"><ol class="linenums"><li class="L0"><code class="language-python"><span class="com"># 判断是否可迭代</span></code></li><li class="L1"><code class="language-python"><span class="kwd">from</span><span class="pln"> collections </span><span class="kwd">import</span><span class="pln"> </span><span class="typ">Iterable</span></code></li><li class="L2"><code class="language-python"><span class="pln">isinstance</span><span class="pun">(</span><span class="pln">d</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Iterable</span><span class="pun">)</span><span class="pln"> </span></code></li></ol></pre><pre data-anchor-id="xkcs"><code>True
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="uuii"><ol class="linenums"><li class="L0"><code class="language-python"><span class="com"># 迭代字典的键</span></code></li><li class="L1"><code class="language-python"><span class="kwd">for</span><span class="pln"> key </span><span class="kwd">in</span><span class="pln"> d</span><span class="pun">:</span></code></li><li class="L2"><code class="language-python"><span class="pln">    </span><span class="kwd">print</span><span class="pun">(</span><span class="pln">key</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="oq97"><code>a
+b
+c
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="6gp7"><ol class="linenums"><li class="L0"><code class="language-python"><span class="com"># 迭代字典的值</span></code></li><li class="L1"><code class="language-python"><span class="kwd">for</span><span class="pln"> key </span><span class="kwd">in</span><span class="pln"> d</span><span class="pun">.</span><span class="pln">values</span><span class="pun">():</span></code></li><li class="L2"><code class="language-python"><span class="pln">    </span><span class="kwd">print</span><span class="pun">(</span><span class="pln">key</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="3gk7"><code>1
+2
+3
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="mq35"><ol class="linenums"><li class="L0"><code class="language-python"><span class="com"># 迭代字典, 同时引用了两个变量</span></code></li><li class="L1"><code class="language-python"><span class="kwd">for</span><span class="pln"> key</span><span class="pun">,</span><span class="pln">value </span><span class="kwd">in</span><span class="pln"> d</span><span class="pun">.</span><span class="pln">items</span><span class="pun">():</span></code></li><li class="L2"><code class="language-python"><span class="pln">    </span><span class="kwd">print</span><span class="pun">(</span><span class="pln">key</span><span class="pun">,</span><span class="pln"> value</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="y6ia"><code>a 1
+b 2
+c 3
+</code></pre><div class="md-section-divider"></div><h2 id="生成器" data-anchor-id="84ac">生成器</h2><p data-anchor-id="xt1q">要创建一个generator，有很多种方法。第一种方法很简单，只要把一个列表生成式的[]改成()，就创建了一个generator：</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="ctjg"><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">L3 </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="pln">x </span><span class="pun">*</span><span class="pln"> x </span><span class="kwd">for</span><span class="pln"> x </span><span class="kwd">in</span><span class="pln"> range</span><span class="pun">(</span><span class="lit">10</span><span class="pun">)]</span></code></li><li class="L1"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">L3</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="20tk"><code>[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="zl49"><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">g </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="pln">x </span><span class="pun">*</span><span class="pln"> x </span><span class="kwd">for</span><span class="pln"> x </span><span class="kwd">in</span><span class="pln"> range</span><span class="pun">(</span><span class="lit">10</span><span class="pun">))</span></code></li><li class="L1"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">g</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="hbgh"><code>&lt;generator object &lt;genexpr&gt; at 0x000001637FDC8308&gt;
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="mc9f"><ol class="linenums"><li class="L0"><code class="language-python"><span class="com"># 可用next按顺序输出generator内的变量</span></code></li><li class="L1"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">next</span><span class="pun">(</span><span class="pln">g</span><span class="pun">))</span></code></li></ol></pre><pre data-anchor-id="uy3b"><code>64
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="yvxi"><ol class="linenums"><li class="L0"><code class="language-python"><span class="com"># 生成斐波拉契数列</span></code></li><li class="L1"><code class="language-python"><span class="kwd">def</span><span class="pln"> fib</span><span class="pun">(</span><span class="pln">max</span><span class="pun">):</span></code></li><li class="L2"><code class="language-python"><span class="pln">    n</span><span class="pun">,</span><span class="pln"> a</span><span class="pun">,</span><span class="pln"> b </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1</span></code></li><li class="L3"><code class="language-python"><span class="pln">    </span><span class="kwd">while</span><span class="pln"> n </span><span class="pun">&lt;</span><span class="pln"> max</span><span class="pun">:</span></code></li><li class="L4"><code class="language-python"><span class="pln">        </span><span class="kwd">print</span><span class="pun">(</span><span class="pln">b</span><span class="pun">)</span></code></li><li class="L5"><code class="language-python"><span class="pln">        a</span><span class="pun">,</span><span class="pln"> b </span><span class="pun">=</span><span class="pln"> b</span><span class="pun">,</span><span class="pln"> a </span><span class="pun">+</span><span class="pln"> b</span></code></li><li class="L6"><code class="language-python"><span class="pln">        n </span><span class="pun">=</span><span class="pln"> n </span><span class="pun">+</span><span class="pln"> </span><span class="lit">1</span></code></li><li class="L7"><code class="language-python"><span class="pln">    </span><span class="kwd">return</span><span class="pln"> </span><span class="str">'done'</span></code></li></ol></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="02xe"><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">fib</span><span class="pun">(</span><span class="lit">6</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="raxk"><code>1
+1
+2
+3
+5
+8
 
-class time(builtins.object)
- |  time([hour[, minute[, second[, microsecond[, tzinfo]]]]]) --&gt; a time object
- |  
- |  All arguments are optional. tzinfo may be None, or an instance of
- |  a tzinfo subclass. The remaining arguments may be ints.
- |  
- |  Methods defined here:
- |  
- |  __eq__(self, value, /)
- |      Return self==value.
- |  
- |  __format__(...)
- |      Formats self with strftime.
- |  
- |  __ge__(self, value, /)
- |      Return self&gt;=value.
- |  
- |  __getattribute__(self, name, /)
- |      Return getattr(self, name).
- |  
- |  __gt__(self, value, /)
- |      Return self&gt;value.
- |  
- |  __hash__(self, /)
- |      Return hash(self).
- |  
- |  __le__(self, value, /)
- |      Return self&lt;=value.
- |  
- |  __lt__(self, value, /)
- |      Return self&lt;value.
- |  
- |  __ne__(self, value, /)
- |      Return self!=value.
- |  
- |  __new__(*args, **kwargs) from builtins.type
- |      Create and return a new object.  See help(type) for accurate signature.
- |  
- |  __reduce__(...)
- |      __reduce__() -&gt; (cls, state)
- |  
- |  __reduce_ex__(...)
- |      __reduce_ex__(proto) -&gt; (cls, state)
- |  
- |  __repr__(self, /)
- |      Return repr(self).
- |  
- |  __str__(self, /)
- |      Return str(self).
- |  
- |  dst(...)
- |      Return self.tzinfo.dst(self).
- |  
- |  isoformat(...)
- |      Return string in ISO 8601 format, [HH[:MM[:SS[.mmm[uuu]]]]][+HH:MM].
- |      
- |      timespec specifies what components of the time to include.
- |  
- |  replace(...)
- |      Return time with new specified fields.
- |  
- |  strftime(...)
- |      format -&gt; strftime() style string.
- |  
- |  tzname(...)
- |      Return self.tzinfo.tzname(self).
- |  
- |  utcoffset(...)
- |      Return self.tzinfo.utcoffset(self).
- |  
- |  ----------------------------------------------------------------------
- |  Data descriptors defined here:
- |  
- |  fold
- |  
- |  hour
- |  
- |  microsecond
- |  
- |  minute
- |  
- |  second
- |  
- |  tzinfo
- |  
- |  ----------------------------------------------------------------------
- |  Data and other attributes defined here:
- |  
- |  max = datetime.time(23, 59, 59, 999999)
- |  
- |  min = datetime.time(0, 0)
- |  
- |  resolution = datetime.timedelta(0, 0, 1)
 
-None
+
+
+
+'done'
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="lom6"><ol class="linenums"><li class="L0"><code class="language-python"><span class="com"># 上面的函数和generator仅一步之遥,只需把print()改成yield</span></code></li><li class="L1"><code class="language-python"><span class="kwd">def</span><span class="pln"> fib_g</span><span class="pun">(</span><span class="pln">max</span><span class="pun">):</span></code></li><li class="L2"><code class="language-python"><span class="pln">    n</span><span class="pun">,</span><span class="pln"> a</span><span class="pun">,</span><span class="pln"> b </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1</span></code></li><li class="L3"><code class="language-python"><span class="pln">    </span><span class="kwd">while</span><span class="pln"> n </span><span class="pun">&lt;</span><span class="pln"> max</span><span class="pun">:</span></code></li><li class="L4"><code class="language-python"><span class="pln">        </span><span class="kwd">yield</span><span class="pln"> b</span></code></li><li class="L5"><code class="language-python"><span class="pln">        a</span><span class="pun">,</span><span class="pln"> b </span><span class="pun">=</span><span class="pln"> b</span><span class="pun">,</span><span class="pln"> a </span><span class="pun">+</span><span class="pln"> b</span></code></li><li class="L6"><code class="language-python"><span class="pln">        n </span><span class="pun">=</span><span class="pln"> n </span><span class="pun">+</span><span class="pln"> </span><span class="lit">1</span></code></li><li class="L7"><code class="language-python"><span class="pln">    </span><span class="kwd">return</span><span class="pln"> </span><span class="str">'done'</span></code></li></ol></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="pgc0"><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">fib_g</span><span class="pun">(</span><span class="lit">6</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="orpr"><code>&lt;generator object fib at 0x000001637FDC8360&gt;
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="6kyb"><ol class="linenums"><li class="L0"><code class="language-python"><span class="com"># 将生成器转成列表并进行迭代输出</span></code></li><li class="L1"><code class="language-python"><span class="kwd">for</span><span class="pln"> f </span><span class="kwd">in</span><span class="pln"> list</span><span class="pun">(</span><span class="pln">fib_g</span><span class="pun">(</span><span class="lit">6</span><span class="pun">)):</span></code></li><li class="L2"><code class="language-python"><span class="pln">    </span><span class="kwd">print</span><span class="pun">(</span><span class="pln">f</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="hvup"><code>1
+1
+2
+3
+5
+8
+</code></pre><div class="md-section-divider"></div><h2 id="迭代器" data-anchor-id="vaot">迭代器</h2><p data-anchor-id="z0sk">生成器都是Iterator对象，但list、dict、str虽然是Iterable，却不是Iterator。</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="qt1k"><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">from</span><span class="pln"> collections </span><span class="kwd">import</span><span class="pln"> </span><span class="typ">Iterator</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Iterable</span></code></li><li class="L1"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">isinstance</span><span class="pun">((</span><span class="pln">x </span><span class="kwd">for</span><span class="pln"> x </span><span class="kwd">in</span><span class="pln"> range</span><span class="pun">(</span><span class="lit">10</span><span class="pun">)),</span><span class="pln"> </span><span class="typ">Iterable</span><span class="pun">))</span></code></li><li class="L2"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">isinstance</span><span class="pun">((</span><span class="pln">x </span><span class="kwd">for</span><span class="pln"> x </span><span class="kwd">in</span><span class="pln"> range</span><span class="pun">(</span><span class="lit">10</span><span class="pun">)),</span><span class="pln"> </span><span class="typ">Iterator</span><span class="pun">))</span></code></li></ol></pre><pre data-anchor-id="8i1c"><code>True
+True
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="cy3z"><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">isinstance</span><span class="pun">([],</span><span class="pln"> </span><span class="typ">Iterable</span><span class="pun">))</span></code></li><li class="L1"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">isinstance</span><span class="pun">([],</span><span class="pln"> </span><span class="typ">Iterator</span><span class="pun">))</span></code></li></ol></pre><pre data-anchor-id="e5rz"><code>True
+False
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="qqdo"><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">isinstance</span><span class="pun">({},</span><span class="pln"> </span><span class="typ">Iterable</span><span class="pun">))</span></code></li><li class="L1"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">isinstance</span><span class="pun">({},</span><span class="pln"> </span><span class="typ">Iterator</span><span class="pun">))</span></code></li></ol></pre><pre data-anchor-id="tv6w"><code>True
+False
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="c9ck"><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">isinstance</span><span class="pun">(</span><span class="str">'abc'</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Iterable</span><span class="pun">))</span></code></li><li class="L1"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">isinstance</span><span class="pun">(</span><span class="str">'abc'</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Iterator</span><span class="pun">))</span></code></li></ol></pre><pre data-anchor-id="k127"><code>True
+False
+</code></pre><p data-anchor-id="maqu">把list、dict、str等Iterable变成Iterator可以使用iter()函数：</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="8jdx"><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">isinstance</span><span class="pun">(</span><span class="pln">iter</span><span class="pun">([]),</span><span class="pln"> </span><span class="typ">Iterator</span><span class="pun">))</span></code></li><li class="L1"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">isinstance</span><span class="pun">(</span><span class="pln">iter</span><span class="pun">({}),</span><span class="pln"> </span><span class="typ">Iterator</span><span class="pun">))</span></code></li><li class="L2"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">isinstance</span><span class="pun">(</span><span class="pln">iter</span><span class="pun">(</span><span class="str">'abc'</span><span class="pun">),</span><span class="pln"> </span><span class="typ">Iterator</span><span class="pun">))</span></code></li></ol></pre><pre data-anchor-id="mlxr"><code>True
+True
+True
+</code></pre><p data-anchor-id="4ndx">为什么list、dict、str等数据类型不是Iterator？</p><p data-anchor-id="le6n">这是因为Python的Iterator对象表示的是一个数据流，Iterator对象可以被next()函数调用并不断返回下一个数据，直到没有数据时抛出StopIteration错误。可以把这个数据流看做是一个有序序列，但我们却不能提前知道序列的长度，只能不断通过next()函数实现按需计算下一个数据，所以Iterator的计算是惰性的，只有在需要返回下一个数据时它才会计算。 <br>
+Iterator甚至可以表示一个无限大的数据流，例如全体自然数。而使用list是永远不可能存储全体自然数的。</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="e8p2"><ol class="linenums"><li class="L0"><code class="language-python"><span class="com"># 首先获得Iterator对象:</span></code></li><li class="L1"><code class="language-python"><span class="pln">it </span><span class="pun">=</span><span class="pln"> iter</span><span class="pun">([</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln"> </span><span class="lit">3</span><span class="pun">,</span><span class="pln"> </span><span class="lit">4</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pun">])</span></code></li></ol></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="j0ip"><ol class="linenums"><li class="L0"><code class="language-python"><span class="com"># 循环:</span></code></li><li class="L1"><code class="language-python"><span class="kwd">while</span><span class="pln"> </span><span class="kwd">True</span><span class="pun">:</span></code></li><li class="L2"><code class="language-python"><span class="pln">    </span><span class="kwd">try</span><span class="pun">:</span></code></li><li class="L3"><code class="language-python"><span class="pln">        </span><span class="com"># 获得下一个值:</span></code></li><li class="L4"><code class="language-python"><span class="pln">        x </span><span class="pun">=</span><span class="pln"> next</span><span class="pun">(</span><span class="pln">it</span><span class="pun">)</span></code></li><li class="L5"><code class="language-python"><span class="pln">        </span><span class="kwd">print</span><span class="pun">(</span><span class="pln">x</span><span class="pun">)</span></code></li><li class="L6"><code class="language-python"><span class="pln">    </span><span class="kwd">except</span><span class="pln"> </span><span class="typ">StopIteration</span><span class="pun">:</span></code></li><li class="L7"><code class="language-python"><span class="pln">        </span><span class="com"># 遇到StopIteration就退出循环</span></code></li><li class="L8"><code class="language-python"><span class="pln">        </span><span class="kwd">break</span></code></li></ol></pre><pre data-anchor-id="o65d"><code>1
+2
+3
+4
+5
 </code></pre></div>
     <div class="remark-icons">
     </div>
@@ -1350,7 +1306,7 @@ None
     <li class="file-item item" file-created-date="2018-03-21T02:17:49.000000Z">
         <a tabindex="-1" href="https://www.zybuluo.com/Channelchan/note/1081382" title="【已发布】 2018-03-21T02:28:51.000000Z">
         <i class="icon-share-sign"></i>
-        <span id="1081382">Python高级特性</span>
+        <span id="1081382" class="whiter-on-black">Python高级特性</span>
         </a>
     </li>
 
@@ -2150,7 +2106,7 @@ None
     <li class="file-item item" file-created-date="2017-03-03T01:28:57.000000Z">
         <a tabindex="-1" href="https://www.zybuluo.com/Channelchan/note/644665" title="【已发布】 2018-03-21T02:07:58.000000Z">
         <i class="icon-share-sign"></i>
-        <span id="644665" class="whiter-on-black">Python模块导入</span>
+        <span id="644665">Python模块导入</span>
         </a>
     </li>
 
@@ -2405,15 +2361,15 @@ None
             // '' means not logged in, otherwise the logged in username, for mdeditor.mako, this value will be reset in render.js otherwise, for user_note.mako, it's rendered by server side.
             loggedInUsername: '',
             isPageOwner: 'False' === 'True' ? true : false,
-            loginComeFromUrl: 'https://www.zybuluo.com/login?return_to=https%3A%2F%2Fwww.zybuluo.com%2FChannelchan%2Fnote%2F644665',
-            noteRemarksUrl: "https://www.zybuluo.com/note/644665/remarks", 
-            newNoteRemarkUrl: "https://www.zybuluo.com/note/644665/remark/new", 
-            updateNoteRemarkUrl: "https://www.zybuluo.com/note/644665/remark/update", 
-            deleteNoteRemarkUrl: "https://www.zybuluo.com/note/644665/remark/delete", 
-            publishNoteRemarkUrl: "https://www.zybuluo.com/note/644665/remark/publish", 
-            newNoteRemarkReplyUrl: "https://www.zybuluo.com/note/644665/remark_reply/new", 
-            updateNoteRemarkReplyUrl: "https://www.zybuluo.com/note/644665/remark_reply/update", 
-            deleteNoteRemarkReplyUrl: "https://www.zybuluo.com/note/644665/remark_reply/delete", 
+            loginComeFromUrl: 'https://www.zybuluo.com/login?return_to=https%3A%2F%2Fwww.zybuluo.com%2FChannelchan%2Fnote%2F1081382',
+            noteRemarksUrl: "https://www.zybuluo.com/note/1081382/remarks", 
+            newNoteRemarkUrl: "https://www.zybuluo.com/note/1081382/remark/new", 
+            updateNoteRemarkUrl: "https://www.zybuluo.com/note/1081382/remark/update", 
+            deleteNoteRemarkUrl: "https://www.zybuluo.com/note/1081382/remark/delete", 
+            publishNoteRemarkUrl: "https://www.zybuluo.com/note/1081382/remark/publish", 
+            newNoteRemarkReplyUrl: "https://www.zybuluo.com/note/1081382/remark_reply/new", 
+            updateNoteRemarkReplyUrl: "https://www.zybuluo.com/note/1081382/remark_reply/update", 
+            deleteNoteRemarkReplyUrl: "https://www.zybuluo.com/note/1081382/remark_reply/delete", 
         };
 
         // BEGIN: pace.js configuration

@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     
-    <title>Python模块导入 - 作业部落 Cmd Markdown 编辑阅读器</title>
+    <title>Python 内建函数 - 作业部落 Cmd Markdown 编辑阅读器</title>
 
 
     <link href="https://www.zybuluo.com/static/img/favicon.png" type="image/x-icon" rel="icon">
@@ -69,111 +69,21 @@
         <span>
             <code>@Channelchan</code>
         </span>
-        <code><span class="article-updated-date">2018-03-21T02:07:58.000000Z</span></code>
-        <code><span>字数 </span><span class="article-characters">2465</span></code>
-        <code><span>阅读 </span><span class="article-read">118333</span></code>
+        <code><span class="article-updated-date">2018-03-21T02:14:20.000000Z</span></code>
+        <code><span>字数 </span><span class="article-characters">1602</span></code>
+        <code><span>阅读 </span><span class="article-read">37193</span></code>
     </div>
-    <div id="wmd-preview" class="wmd-preview wmd-preview-full-reader"><div class="md-section-divider"></div><div class="md-section-divider"></div><h2 data-anchor-id="aymh" id="python模块导入">Python模块导入</h2><div class="md-section-divider"></div><h3 data-anchor-id="fgo3" id="import">import</h3><p data-anchor-id="uxtu">想使用Python源文件，只需在另一个源文件里执行import语句，语法如下：</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="1cao" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">import</span><span class="pln"> numpy</span></code></li><li class="L1"><code class="language-python"><span class="pln">n</span><span class="pun">=</span><span class="pln">numpy</span><span class="pun">.</span><span class="pln">array</span><span class="pun">([[</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2</span><span class="pun">],[</span><span class="lit">3</span><span class="pun">,</span><span class="pln"> </span><span class="lit">4</span><span class="pun">]])</span></code></li><li class="L2"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">n</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="s7br"><code>[[1 2]
- [3 4]]
-</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="6yd4" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">import</span><span class="pln"> matplotlib</span><span class="pun">.</span><span class="pln">pyplot </span><span class="kwd">as</span><span class="pln"> plt</span></code></li><li class="L1"><code class="language-python"><span class="pln">plt</span><span class="pun">.</span><span class="pln">plot</span><span class="pun">(</span><span class="pln">n</span><span class="pun">)</span></code></li><li class="L2"><code class="language-python"><span class="pln">plt</span><span class="pun">.</span><span class="pln">show</span><span class="pun">()</span></code></li></ol></pre><p data-anchor-id="9c3t"><img src="http://static.zybuluo.com/Channelchan/nghu43i1yxapltvb6wz0p9vp/output_2_0.png" alt="output_2_0.png-10.8kB" title=""></p><div class="md-section-divider"></div><h3 data-anchor-id="5bo2" id="fromimport">from...import*</h3><p data-anchor-id="9x23">这提供了一个简单的方法来导入一个模块中的所有项目。然而这种声明不该被过多地使用。  <br>
-把一个模块的所有内容全都导入到当前的命名空间也是可行的，只需使用如下声明：</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="k0je" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">from</span><span class="pln"> datetime </span><span class="kwd">import</span><span class="pln"> </span><span class="pun">*</span></code></li></ol></pre><div class="md-section-divider"></div><h3 data-anchor-id="jwbd" id="fromimport语句">from...import语句：</h3><p data-anchor-id="tl4w">Python的from语句让你从模块中导入一个指定的部分到当前命名空间中。 </p><p data-anchor-id="ajxr">dir()函数一个排好序的字符串列表，返回的列表容纳了在一个模块里定义的所有模块，变量和函数。</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="wl9a" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">from</span><span class="pln"> datetime </span><span class="kwd">import</span><span class="pln"> time</span></code></li><li class="L1"><code class="language-python"></code></li><li class="L2"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">dir</span><span class="pun">(</span><span class="pln">time</span><span class="pun">))</span></code></li></ol></pre><pre data-anchor-id="vj9m"><code>['__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'dst', 'fold', 'hour', 'isoformat', 'max', 'microsecond', 'min', 'minute', 'replace', 'resolution', 'second', 'strftime', 'tzinfo', 'tzname', 'utcoffset']
-</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="u1jx" style=""><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">help</span><span class="pun">(</span><span class="pln">time</span><span class="pun">))</span></code></li></ol></pre><pre data-anchor-id="cshz"><code>Help on class time in module datetime:
-
-class time(builtins.object)
- |  time([hour[, minute[, second[, microsecond[, tzinfo]]]]]) --&gt; a time object
- |  
- |  All arguments are optional. tzinfo may be None, or an instance of
- |  a tzinfo subclass. The remaining arguments may be ints.
- |  
- |  Methods defined here:
- |  
- |  __eq__(self, value, /)
- |      Return self==value.
- |  
- |  __format__(...)
- |      Formats self with strftime.
- |  
- |  __ge__(self, value, /)
- |      Return self&gt;=value.
- |  
- |  __getattribute__(self, name, /)
- |      Return getattr(self, name).
- |  
- |  __gt__(self, value, /)
- |      Return self&gt;value.
- |  
- |  __hash__(self, /)
- |      Return hash(self).
- |  
- |  __le__(self, value, /)
- |      Return self&lt;=value.
- |  
- |  __lt__(self, value, /)
- |      Return self&lt;value.
- |  
- |  __ne__(self, value, /)
- |      Return self!=value.
- |  
- |  __new__(*args, **kwargs) from builtins.type
- |      Create and return a new object.  See help(type) for accurate signature.
- |  
- |  __reduce__(...)
- |      __reduce__() -&gt; (cls, state)
- |  
- |  __reduce_ex__(...)
- |      __reduce_ex__(proto) -&gt; (cls, state)
- |  
- |  __repr__(self, /)
- |      Return repr(self).
- |  
- |  __str__(self, /)
- |      Return str(self).
- |  
- |  dst(...)
- |      Return self.tzinfo.dst(self).
- |  
- |  isoformat(...)
- |      Return string in ISO 8601 format, [HH[:MM[:SS[.mmm[uuu]]]]][+HH:MM].
- |      
- |      timespec specifies what components of the time to include.
- |  
- |  replace(...)
- |      Return time with new specified fields.
- |  
- |  strftime(...)
- |      format -&gt; strftime() style string.
- |  
- |  tzname(...)
- |      Return self.tzinfo.tzname(self).
- |  
- |  utcoffset(...)
- |      Return self.tzinfo.utcoffset(self).
- |  
- |  ----------------------------------------------------------------------
- |  Data descriptors defined here:
- |  
- |  fold
- |  
- |  hour
- |  
- |  microsecond
- |  
- |  minute
- |  
- |  second
- |  
- |  tzinfo
- |  
- |  ----------------------------------------------------------------------
- |  Data and other attributes defined here:
- |  
- |  max = datetime.time(23, 59, 59, 999999)
- |  
- |  min = datetime.time(0, 0)
- |  
- |  resolution = datetime.timedelta(0, 0, 1)
-
-None
+    <div id="wmd-preview" class="wmd-preview wmd-preview-full-reader"><div class="md-section-divider"></div><div class="md-section-divider"></div><h1 id="python-内建函数" data-anchor-id="l78l">Python 内建函数</h1><div class="md-section-divider"></div><h2 id="python内置函数教程" data-anchor-id="d5rs">Python内置函数教程：</h2><p data-anchor-id="l3vd"><a href="http://www.runoob.com/python/python-built-in-functions.html" target="_blank">http://www.runoob.com/python/python-built-in-functions.html</a></p><div class="md-section-divider"></div><h2 id="range" data-anchor-id="c2id">Range</h2><p data-anchor-id="u09t">range(start, stop[, step])</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="3oko"><ol class="linenums"><li class="L0"><code class="language-python"><span class="com"># 生成以5开始，到99，间隔为5</span></code></li><li class="L1"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">list</span><span class="pun">(</span><span class="pln">range</span><span class="pun">(</span><span class="lit">5</span><span class="pun">,</span><span class="lit">100</span><span class="pun">,</span><span class="lit">5</span><span class="pun">)))</span></code></li></ol></pre><pre data-anchor-id="bykl"><code>[5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95]
+</code></pre><div class="md-section-divider"></div><h2 id="len" data-anchor-id="ektw">Len</h2><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="8em9"><ol class="linenums"><li class="L0"><code class="language-python"><span class="com"># 返回长度</span></code></li><li class="L1"><code class="language-python"><span class="pln">len</span><span class="pun">(</span><span class="pln">list</span><span class="pun">(</span><span class="pln">range</span><span class="pun">(</span><span class="lit">5</span><span class="pun">,</span><span class="lit">100</span><span class="pun">,</span><span class="lit">5</span><span class="pun">)))</span></code></li></ol></pre><pre data-anchor-id="bsr5"><code>19
+</code></pre><div class="md-section-divider"></div><h2 id="map" data-anchor-id="nc1g">Map</h2><p data-anchor-id="3fo2">map(function, iterable, ...)</p><p data-anchor-id="zsju">方法： X**2</p><p data-anchor-id="vyvh">输入： [1,2,3,4,5]</p><p data-anchor-id="lb8d">返回： [1,4,9,16,25]</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="a4qe"><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">list</span><span class="pun">(</span><span class="pln">map</span><span class="pun">(</span><span class="kwd">lambda</span><span class="pln"> x</span><span class="pun">:</span><span class="pln"> x</span><span class="pun">**</span><span class="lit">2</span><span class="pun">,</span><span class="pln"> range</span><span class="pun">(</span><span class="lit">1</span><span class="pun">,</span><span class="lit">6</span><span class="pun">))))</span></code></li></ol></pre><pre data-anchor-id="euqw"><code>[1, 4, 9, 16, 25]
+</code></pre><p data-anchor-id="p731">方法： <span class="MathJax_Preview"></span><span class="MathJax_SVG" id="MathJax-Element-1-Frame" role="textbox" aria-readonly="true" style="font-size: 100%; display: inline-block;"><svg xmlns="http://www.w3.org/2000/svg" style="margin: 1px 0px; width: 5.3ex; height: 1.96ex; vertical-align: -0.57ex;" viewBox="0 -604.129 2292.94 830.258" xmlns:xlink="http://www.w3.org/1999/xlink"><g fill="black" stroke="black" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMATHI-78" /><use x="794" y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMAIN-2B" /><use x="1795" y="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MJMATHI-79" /></g></svg></span><script id="MathJax-Element-1" type="math/tex">x + y</script></p><p data-anchor-id="l78n">输入： [1,2,3,4,5] , [8,9,10,11,12]</p><p data-anchor-id="ezfw">返回： [9, 11, 13, 15, 17]</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="5ygq"><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">list</span><span class="pun">(</span><span class="pln">map</span><span class="pun">(</span><span class="kwd">lambda</span><span class="pln"> x</span><span class="pun">,</span><span class="pln"> y</span><span class="pun">:</span><span class="pln"> x </span><span class="pun">+</span><span class="pln"> y</span><span class="pun">,</span><span class="pln"> range</span><span class="pun">(</span><span class="lit">1</span><span class="pun">,</span><span class="lit">6</span><span class="pun">),</span><span class="pln"> range</span><span class="pun">(</span><span class="lit">8</span><span class="pun">,</span><span class="lit">13</span><span class="pun">))))</span></code></li></ol></pre><pre data-anchor-id="f8tk"><code>[9, 11, 13, 15, 17]
+</code></pre><div class="md-section-divider"></div><h2 id="reduce" data-anchor-id="je4k">Reduce</h2><p data-anchor-id="c6h5">reduce(function, iterable[, initializer])</p><p data-anchor-id="1ba1">reduce() 函数会对参数序列中元素进行累积。</p><p data-anchor-id="o4aj">函数将一个数据集合（链表，元组等）中的所有数据进行下列操作：用传给reduce中的函数 function（有两个参数）先对集合中的第 1、2 个元素进行操作，得到的结果再与第三个数据用 function 函数运算，最后得到一个结果。</p><p data-anchor-id="7qr3">reduce(f, [x1, x2, x3, x4]) = f(f(f(x1, x2), x3), x4)</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="l2hb"><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">from</span><span class="pln"> functools </span><span class="kwd">import</span><span class="pln"> reduce</span></code></li><li class="L1"><code class="language-python"><span class="kwd">def</span><span class="pln"> add</span><span class="pun">(</span><span class="pln">x</span><span class="pun">,</span><span class="pln"> y</span><span class="pun">):</span></code></li><li class="L2"><code class="language-python"><span class="pln">    </span><span class="kwd">return</span><span class="pln"> x </span><span class="pun">+</span><span class="pln"> y</span></code></li><li class="L3"><code class="language-python"></code></li><li class="L4"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">reduce</span><span class="pun">(</span><span class="pln">add</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">3</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">7</span><span class="pun">,</span><span class="pln"> </span><span class="lit">9</span><span class="pun">]))</span></code></li></ol></pre><pre data-anchor-id="9laz"><code>25
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="lzb9"><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">reduce</span><span class="pun">(</span><span class="pln">add</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">3</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">7</span><span class="pun">,</span><span class="pln"> </span><span class="lit">9</span><span class="pun">],</span><span class="pln"> </span><span class="lit">10</span><span class="pun">))</span></code></li></ol></pre><pre data-anchor-id="559q"><code>35
+</code></pre><div class="md-section-divider"></div><h2 id="filter" data-anchor-id="m9ug">Filter</h2><p data-anchor-id="yh0x">Python内建的filter()函数用于过滤序列。</p><p data-anchor-id="cmvp">和map()类似，filter()也接收一个函数和一个序列。和map()不同的是，filter()把传入的函数依次作用于每个元素，然后根据返回值是True还是False决定保留还是丢弃该元素。</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="ux2v"><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">def</span><span class="pln"> is_odd</span><span class="pun">(</span><span class="pln">n</span><span class="pun">):</span></code></li><li class="L1"><code class="language-python"><span class="pln">    </span><span class="kwd">return</span><span class="pln"> </span><span class="pun">(</span><span class="pln">n</span><span class="pun">&gt;=</span><span class="lit">5</span><span class="pun">)</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln"> </span><span class="pun">(</span><span class="pln">n</span><span class="pun">&lt;</span><span class="lit">11</span><span class="pun">)</span></code></li><li class="L2"><code class="language-python"></code></li><li class="L3"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">list</span><span class="pun">(</span><span class="pln">filter</span><span class="pun">(</span><span class="pln">is_odd</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln"> </span><span class="lit">4</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">6</span><span class="pun">,</span><span class="pln"> </span><span class="lit">9</span><span class="pun">,</span><span class="pln"> </span><span class="lit">10</span><span class="pun">,</span><span class="pln"> </span><span class="lit">15</span><span class="pun">])))</span></code></li></ol></pre><pre data-anchor-id="zlu3"><code>[5, 6, 9, 10]
+</code></pre><div class="md-section-divider"></div><h2 id="sorted" data-anchor-id="4gx5">Sorted</h2><p data-anchor-id="bdls">sorted(iterable[, cmp[, key[, reverse]]])</p><p data-anchor-id="n5yh">iterable -- 可迭代对象。</p><p data-anchor-id="i1fy">key -- 主要是用来进行比较的元素，只有一个参数，具体的函数的参数就是取自于可迭代对象中，指定可迭代对象中的一个元素来进行排序。</p><p data-anchor-id="49av">reverse -- 排序规则，reverse = True 降序 ， reverse = False 升序（默认）。</p><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="25vv"><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">sorted</span><span class="pun">?</span></code></li></ol></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="y50b"><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">sorted</span><span class="pun">([</span><span class="lit">92</span><span class="pun">,</span><span class="pln"> </span><span class="lit">175</span><span class="pun">,</span><span class="pln"> </span><span class="lit">70</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1000</span><span class="pun">]))</span></code></li></ol></pre><pre data-anchor-id="qcz0"><code>[70, 92, 175, 1000]
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="x8tk"><ol class="linenums"><li class="L0"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">sorted</span><span class="pun">([</span><span class="str">'MSFT'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'APPL'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'IBKR'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'GOOG'</span><span class="pun">],</span><span class="pln">  reverse</span><span class="pun">=</span><span class="kwd">True</span><span class="pun">))</span></code></li></ol></pre><pre data-anchor-id="yeai"><code>['MSFT', 'IBKR', 'GOOG', 'APPL']
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="s7kl"><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">L </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[(</span><span class="str">'MSFT'</span><span class="pun">,</span><span class="pln"> </span><span class="lit">92</span><span class="pun">),</span><span class="pln"> </span><span class="pun">(</span><span class="str">'APPL'</span><span class="pun">,</span><span class="pln"> </span><span class="lit">175</span><span class="pun">),</span><span class="pln"> </span><span class="pun">(</span><span class="str">'IBKR'</span><span class="pun">,</span><span class="pln"> </span><span class="lit">70</span><span class="pun">),</span><span class="pln"> </span><span class="pun">(</span><span class="str">'GOOG'</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1000</span><span class="pun">)]</span></code></li></ol></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="td2v"><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">L2 </span><span class="pun">=</span><span class="pln"> sorted</span><span class="pun">(</span><span class="pln">L</span><span class="pun">,</span><span class="pln"> key</span><span class="pun">=</span><span class="kwd">lambda</span><span class="pln"> x</span><span class="pun">:</span><span class="pln">x</span><span class="pun">[</span><span class="lit">0</span><span class="pun">])</span></code></li><li class="L1"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">L2</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="ulgv"><code>[('APPL', 175), ('GOOG', 1000), ('IBKR', 70), ('MSFT', 92)]
+</code></pre><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="6bs9"><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">L3 </span><span class="pun">=</span><span class="pln"> sorted</span><span class="pun">(</span><span class="pln">L</span><span class="pun">,</span><span class="pln"> key</span><span class="pun">=</span><span class="kwd">lambda</span><span class="pln"> x</span><span class="pun">:</span><span class="pln">x</span><span class="pun">[</span><span class="lit">1</span><span class="pun">],</span><span class="pln"> reverse</span><span class="pun">=</span><span class="kwd">True</span><span class="pun">)</span></code></li><li class="L1"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">L3</span><span class="pun">)</span></code></li></ol></pre><pre data-anchor-id="o73j"><code>[('GOOG', 1000), ('APPL', 175), ('MSFT', 92), ('IBKR', 70)]
 </code></pre></div>
     <div class="remark-icons">
     </div>
@@ -1366,7 +1276,7 @@ None
     <li class="file-item item" file-created-date="2018-03-20T10:12:40.000000Z">
         <a tabindex="-1" href="https://www.zybuluo.com/Channelchan/note/1080782" title="【已发布】 2018-03-21T02:14:20.000000Z">
         <i class="icon-share-sign"></i>
-        <span id="1080782">Python 内建函数</span>
+        <span id="1080782" class="whiter-on-black">Python 内建函数</span>
         </a>
     </li>
 
@@ -2150,7 +2060,7 @@ None
     <li class="file-item item" file-created-date="2017-03-03T01:28:57.000000Z">
         <a tabindex="-1" href="https://www.zybuluo.com/Channelchan/note/644665" title="【已发布】 2018-03-21T02:07:58.000000Z">
         <i class="icon-share-sign"></i>
-        <span id="644665" class="whiter-on-black">Python模块导入</span>
+        <span id="644665">Python模块导入</span>
         </a>
     </li>
 
@@ -2405,15 +2315,15 @@ None
             // '' means not logged in, otherwise the logged in username, for mdeditor.mako, this value will be reset in render.js otherwise, for user_note.mako, it's rendered by server side.
             loggedInUsername: '',
             isPageOwner: 'False' === 'True' ? true : false,
-            loginComeFromUrl: 'https://www.zybuluo.com/login?return_to=https%3A%2F%2Fwww.zybuluo.com%2FChannelchan%2Fnote%2F644665',
-            noteRemarksUrl: "https://www.zybuluo.com/note/644665/remarks", 
-            newNoteRemarkUrl: "https://www.zybuluo.com/note/644665/remark/new", 
-            updateNoteRemarkUrl: "https://www.zybuluo.com/note/644665/remark/update", 
-            deleteNoteRemarkUrl: "https://www.zybuluo.com/note/644665/remark/delete", 
-            publishNoteRemarkUrl: "https://www.zybuluo.com/note/644665/remark/publish", 
-            newNoteRemarkReplyUrl: "https://www.zybuluo.com/note/644665/remark_reply/new", 
-            updateNoteRemarkReplyUrl: "https://www.zybuluo.com/note/644665/remark_reply/update", 
-            deleteNoteRemarkReplyUrl: "https://www.zybuluo.com/note/644665/remark_reply/delete", 
+            loginComeFromUrl: 'https://www.zybuluo.com/login?return_to=https%3A%2F%2Fwww.zybuluo.com%2FChannelchan%2Fnote%2F1080782',
+            noteRemarksUrl: "https://www.zybuluo.com/note/1080782/remarks", 
+            newNoteRemarkUrl: "https://www.zybuluo.com/note/1080782/remark/new", 
+            updateNoteRemarkUrl: "https://www.zybuluo.com/note/1080782/remark/update", 
+            deleteNoteRemarkUrl: "https://www.zybuluo.com/note/1080782/remark/delete", 
+            publishNoteRemarkUrl: "https://www.zybuluo.com/note/1080782/remark/publish", 
+            newNoteRemarkReplyUrl: "https://www.zybuluo.com/note/1080782/remark_reply/new", 
+            updateNoteRemarkReplyUrl: "https://www.zybuluo.com/note/1080782/remark_reply/update", 
+            deleteNoteRemarkReplyUrl: "https://www.zybuluo.com/note/1080782/remark_reply/delete", 
         };
 
         // BEGIN: pace.js configuration
